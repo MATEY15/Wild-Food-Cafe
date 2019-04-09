@@ -2,7 +2,7 @@ extends layout.pug
 
 block prepend header-two
 	- var selected = 'spine'
-	include include/header-spine
+	//- include include/header-spine
 
 block prepend main
 	svg.shape-overlays(viewbox='0 0 100 100', preserveaspectratio='none')
@@ -11,13 +11,13 @@ block prepend main
 		path.shape-overlays__path
 
 	+b.MAIN.section_main
-		include include/motion
+		//- include include/motion
 		//- include include/motion-capture
-		include include/section-device-2
-		include include/section-description-2
-		include include/section-news
-		include include/section-start
-		//- include include/footer
+		//- include include/section-device-2
+		//- include include/section-description-2
+		//- include include/section-news
+		//- include include/section-start
+		include include/footer
 		//- +b.SECTION.new-section
 		//- 	| Main
 		//- a.button--call#create-cup-open

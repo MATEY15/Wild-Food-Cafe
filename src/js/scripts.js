@@ -1,14 +1,14 @@
 //= jquery.min.js
 //= jquery.magnific-popup.min.js
 
-window.onload = function(){
-  // $("body").toggleClass('opacity');
-  $("#overlayer").delay(1000).fadeOut("slow");
-  overlay.toggle();
-  setTimeout(function() {
-    overlay.toggle();
-  }, 800);
-}
+// window.onload = function(){
+//   // $("body").toggleClass('opacity');
+//   $("#overlayer").delay(1000).fadeOut("slow");
+//   overlay.toggle();
+//   setTimeout(function() {
+//     overlay.toggle();
+//   }, 800);
+// }
 
 $(".burger-menu").on("click", function() {  
   $(".menu-header").toggleClass('is-active');

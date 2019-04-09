@@ -1,12 +1,12 @@
 headerRowWidth = 775px // variable
 
 .header
-	padding-top 32px
 	position relative
 	height: headerRowWidth
-	background-size cover !important
-	background-position center 0 !important
-	background-repeat no-repeat !important
+	background: #333
+	// background-size cover !important
+	// background-position center 0 !important
+	// background-repeat no-repeat !important
 	// background rgb(49,88,211)
 	// background -moz-linear-gradient(top, rgba(49,88,211,1) 0%, rgba(80,119,241,1) 100%)
 	// background -webkit-linear-gradient(top, rgba(49,88,211,1) 0%,rgba(80,119,241,1) 100%)
@@ -22,23 +22,14 @@ headerRowWidth = 775px // variable
 	
 	.top-line
 		position relative
+		height 66px
+		background: cWhite
 		z-index 10
-	
-	.flex-wrapper
-		display flex
-		justify-content space-between
-		align-items center
-
-.bg-header
-	position absolute
-	left 0
-	top 0
-	width 100%
-	height 100%
-	background-size cover !important
-	background-position center 0 !important
-	background-repeat no-repeat !important
-	opacity .1
+		.flex-wrapper
+			display flex
+			justify-content space-between
+			align-items center
+			height 66px
 
 .logo-top
 	&__link
@@ -46,13 +37,28 @@ headerRowWidth = 775px // variable
 		text-decoration none
 		font-family: fPoppinsBold
 		font-size 21px
-	&__img
-		margin-right 19px
+	&__svg
+		width 32px
+		height 32px
+		fill cBlueDark
+		margin-right 14px
 	&__name
 		display inline-block
+		font-family: JournalSansNew
+		font-size 20px
 		vertical-align top
-		margin-top 15px
-		color cWhite
+		margin-top 4px
+		color cBlueDark
+
+.social-top
+	&__li
+		display inline-block
+	&__link
+		display inline-block
+		svg
+			width 20px
+			height 20px
+			fill cBlueDark
 
 .menu-header
 	&.is-active
@@ -83,17 +89,20 @@ headerRowWidth = 775px // variable
 		&__list-li
 			display inline-block
 			&:not(:last-child)
-				margin-right 54px
+				margin-right 10px
 				@media screen and (max-width: 720px)
 					margin-right 0
 					display block
 					margin-bottom 30px
 			a
-				color: cWhite
-				font-size 15px
+				color: cBlueDark
+				font-size 8.5px
+				text-transform uppercase
 				text-decoration none
 				@media screen and (max-width: 720px)
 					font-size 25px
+			.sub-menu
+				display none
 					
 
 .burger-menu

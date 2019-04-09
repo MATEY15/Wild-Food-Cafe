@@ -3,19 +3,48 @@
 		.flex-wrapper
 			+b.DIV.logo-top_
 				+e.A(href="index.html").__link
-					+e.IMG.__img(src="img/logo.png", alt="Logo Activtrack")
-					+e.SPAN.__name Activtrack
+					+e.SVG.__svg
+						USE(xlink:href="/img/sprite.svg#logo")
+					+e.SPAN.__name WILD FOOD CAFÉ
 			+b.menu-header
 				+b.NAV.nav-top_
 					+e.UL.__list
 						+e.LI.__list-li
-							a(href="spine-track.html") Spine
+							a(href="#") Restaurants
+							+b.UL.sub-menu_
+								+e.LI.__li
+									+e.A(href="#").__link NEAL’S YARD
+								+e.LI.__li
+									+e.A(href="#").__link ISLINGTON
 						+e.LI.__list-li
-							a(href="#") Products
+							a(href="#") School
 						+e.LI.__list-li
-							a(href="blog-page.html") Blog
+							a(href="#") Events
 						+e.LI.__list-li
-							a(href="#") Contact Us
+							a(href="#") About
+						+e.LI.__list-li
+							a(href="#") SHOP
+						+e.LI.__list-li
+							a(href="#") Blog
+						+e.LI.__list-li
+							a(href="#") Press
+						+e.LI.__list-li
+							a(href="#") Contact
+			+b.social-top_
+				+e.UL.__list
+					+e.LI.__li
+						+e.A(href="#").__link
+							+e.SVG.__facebook
+								USE(xlink:href="/img/sprite.svg#facebook")
+					+e.LI.__li
+						+e.A(href="#").__link
+							+e.SVG.__instagramm
+								USE(xlink:href="/img/sprite.svg#instagramm")
+					+e.LI.__li
+						+e.A(href="#").__link
+							+e.SVG.__twitter
+								USE(xlink:href="/img/sprite.svg#twitter")
+			a(href="#").button BOOK NOW
 			.burger-menu
 				span
 				span
