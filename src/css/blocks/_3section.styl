@@ -1,0 +1,81 @@
+.section--brends
+	@media screen and (max-width: 1200px)
+		overflow hidden
+	.brends-container
+		display flex
+		flex-direction row
+		justify-content space-between
+		flex-wrap wrap
+		align-items stretch
+		padding 70px 20px
+		@media screen and (max-width: 854px)
+			padding 50px 20px
+			
+	
+	.brends-item
+		position relative
+		height auto
+		width 25%
+		display flex
+		align-items center
+		justify-content center
+		@media screen and (max-width: 854px)
+			width 50%
+			margin 20px 0
+		@media screen and (max-width: 414px)
+			width 100%
+		&:hover
+			.brends-item__images
+				opacity 0
+				visibility hidden
+				transform: scale(.5);
+			.brends-item__hidden
+				opacity 1
+				visibility visible
+				transform: scale(1);
+		&__hidden
+			position absolute
+			top 0
+			left 0
+			display flex
+			align-items center
+			justify-content center
+			width 100%
+			height 100%
+			text-align center
+			background: cWhite
+			visibility hidden
+			opacity 0
+			trn(.3s)
+			transform: scale(1.3)
+			a
+				font-size 16px
+				c #afafaf
+				text-decoration none
+				text-transform uppercase
+				ls(2px)
+				ffa(JournalSansNew-Bold)
+		&__images
+			position relative
+			display block
+			text-align center
+			visibility visible
+			opacity 1
+			transform: scale(1);
+			trn(.25s)
+			img
+				max-width 80%
+
+.brand-blue
+	background: cBlueLight
+	.brends-container
+		max-width 800px
+		padding 30px 20px
+		.brends-item
+			&:hover
+				.brends-item__images
+					opacity 1
+					visibility visible
+					transform: scale(1);
+		.brends-item__hidden
+			display none

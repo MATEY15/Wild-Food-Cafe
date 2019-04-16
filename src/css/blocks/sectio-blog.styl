@@ -1,0 +1,59 @@
+.section--blog
+	padding-top 70px
+	padding-bottom 70px
+
+.blog
+	display flex
+	flex-direction row
+	flex-wrap wrap
+	margin 0 -15px
+	padding-bottom 20px
+	@media screen and (max-width: 1170px)
+		margin 0
+	@media screen and (max-width: 639px)
+		justify-content center
+	&__items
+		display flex
+		flex-direction column
+		justify-content center
+		width calc(100% / 3)
+		padding 0 15px
+		c cBlueDark
+		text-align center
+		ffa(JournalSansNew)
+		margin-bottom 60px
+		@media screen and (max-width: 900px)
+			width calc(100% / 2)
+		@media screen and (max-width: 639px)
+			width 100%
+			max-width 360px
+		p
+			font-size 19px
+			ffa(JournalSansNew-Bold)
+			ls(1.3px)
+			lh(28px)
+		.names
+			font-size 20px
+			ls(1.3px)
+			margin-top 16px
+			margin-bottom 14px
+		.date
+			display block
+			font-size 16px
+			ls(1.33px)
+		.read
+			display inline-block
+			c cBlueDark
+			font-size 18px
+			ls(2.8px)
+			margin-top 24px
+	
+.view-all
+	text-align center
+	&__link
+		c cBlueDark
+		font-size 18px
+		ffa(JournalSansNew-Bold)
+		ls(2.8px)
+		text-transform uppercase
+		text-decoration none

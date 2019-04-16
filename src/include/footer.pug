@@ -1,17 +1,27 @@
-+b.FOOTER.footer
-	.container.flex-wrapper
-		.footer-left
-			+b.DIV.logo-foot_
-				+e.A(href="#").__link
-					+e.IMG.__img(src="img/logo-white.svg", alt="Logo WILD FOOD CAFÉ")
-			+b.NAV.nav-footer_
-				+e.UL.__list
-					+e.LI.__list-li
-						a(href="#") Products
-					+e.LI.__list-li
-						a(href="#") Blog
-					+e.LI.__list-li
-						a(href="#") Contact Us
-		.copyright
-			p
-				| © 2019 ActiveTrack
++b.FOOTER.section--footer
+	.container
+		+b.DIV.footer-head_
+			+e.A(href="#").__link
+				+e.SVG.__svg
+					USE(xlink:href="img/sprite.svg#logo")
+			+e.H3.__name Book a table at one of our restaurants
+		+b.DIV.footer-bottom_
+			+e.__restaurants
+				h4 RESTAURANTS
+				ul
+					li
+						a(href="#") Neal’s Yard
+					li
+						a(href="#") Islington
+			+e.__adress
+				h4 HOW TO FIND US
+				p 1st Floor, Neals Yard, WC2H 9DP 
+				p 269-270 Upper Street, N1 2UQ
+			+e.__phone
+				h4 Phone
+				a(href="tel:02070413972") 0207 041 3972
+				a(href="tel:02080363990") 0208 036 3990
+			+e.__email
+				h4 EMAIL
+				a(href="mailto::nealsyard@wildfoodcafe.com") nealsyard@wildfoodcafe.com
+				a(href="mailto::islington@wildfoodcafe.com") islington@wildfoodcafe.com

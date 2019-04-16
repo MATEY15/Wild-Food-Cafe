@@ -10,12 +10,15 @@
 	box-sizing border-box
 
 html
-	// background: cBlack
+	height 100%
 
 body
+	position relative
 	overflow-x: hidden
 	min-width 320px
 	background: cWhite
+	font-family: JournalSansNew
+	min-height 100%
 	&.overflow
 		overflow hidden
 
@@ -33,21 +36,33 @@ body
 .align-left
 	float left
 
-h1, h2, h3, h4, h5, h6
-	font-family: fPoppinsSemiBold
-
-h1
-	font-size 32px
-h2
-	font-size 28px
-h3
-	font-size 26px
-h4
-	font-size 22px
-h5
-	font-size 18px
-h6
+p
 	font-size 16px
+	ffa(JournalSansNew)
+	lh(24px)
+	ls(1.25px)
+	c cBlueDark
+
+.line-gradient
+	height 4px
+	width 100%
+	background: gradient
+
+// h1, h2, h3, h4, h5, h6
+// 	font-family: fPoppinsSemiBold
+
+// h1
+// 	font-size 32px
+// h2
+// 	font-size 28px
+// h3
+// 	font-size 26px
+// h4
+// 	font-size 22px
+// h5
+// 	font-size 18px
+// h6
+// 	font-size 16px
 
 .container
 	box-sizing border-box
@@ -56,16 +71,123 @@ h6
 	padding-left 10px
 	padding-right 10px
 	margin 0 auto
-	@media screen and (max-width: 640px)
+
+.container-big
+	max-width 1280px
+	width 100%
+	padding-left 10px
+	padding-right 10px
+	margin 0 auto
+
+.container-full
+	max-width 1800px
+	width 100%
+	padding-left 20px
+	padding-right 20px
+	margin 0 auto
+
+h3.heading-section__blue,
+h3.heading-section__white
+	ffa(JournalSansNew-Bold)
+	font-size 28px
+	text-transform uppercase
+	ls(2px)
+	a
+		c cBlueDark
+		text-decoration none
+h3.heading-section__blue
+	c cBlueDark
+h3.heading-section__white
+	c cWhite
+
+h3.heading-small__blue,
+h3.heading-small__white
+	ffa(JournalSansNew-Bold)
+	font-size 18px
+	text-transform uppercase
+	ls(2px)
+	a
+		c cBlueDark
+		text-decoration none
+h3.heading-small__blue
+	c cBlueDark
+h3.heading-small__white
+	c cWhite
+
+
+.link-back
+	font-size 14px
+	ffa(JournalSansNew-Display)
+	ls(1.75px)
+	c cBlueDark
+	text-decoration none
+	text-transform uppercase
+
+.default-menu
+	.default-list
+		&__li
+			display inline-block
+		&__li:not(:last-child)
+			margin-right 40px
+		&__link
+			font-size 14px
+			ffa(JournalSansNew-Display)
+			ls(1.75px)
+			c cBlueDark
+			text-transform uppercase
+
+.wrap__share-social
+	position relative
+	text-align center
+	&:before
+		position absolute
+		top 50%
+		left 0
+		display block
+		content ""
+		width 100%
+		height 4px
+		background: gradient
+.share-social
+	position relative
+	display inline-block
+	background: cWhite
+	padding-left 30px
+	padding-right 30px
+	@media screen and (max-width: 414px)
 		padding-left 20px
 		padding-right 20px
+	.share-center
+		display flex
+		flex-direction row
+		align-items center
+	span
+		display inline-block
+		font-size 18px
+		ffa(JournalSansNew-Display)
+		ls(2.5px)
+		text-transform uppercase
+		c cBlueDark
+		padding-right 12px
 	
-.heading-h2
-	color cBlack
-	font-family: fPoppinsSemiBold
-	font-size 32px
-	text-align center
-	@media screen and (max-width: 640px)
-		font-size 28px
-		br
-			display none
+	&__list
+		display inline-block
+		li
+			display inline-block
+			a
+				display flex
+				flex-direction row
+				align-items center
+				background: cBlueDark
+				c cWhite
+				padding 5px
+				text-decoration none
+				svg
+					fill cWhite
+					width 24px
+					height 24px
+				span
+					display inline-block
+					margin-left 10px
+					c cWhite
+					padding-right 0

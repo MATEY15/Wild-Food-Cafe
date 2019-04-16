@@ -1,0 +1,19 @@
+extends layout.pug
+
+block variable
+	- var slideName = 'School'
+
+block prepend main
+	svg.shape-overlays(viewbox='0 0 100 100', preserveaspectratio='none')
+		path.shape-overlays__path
+		path.shape-overlays__path
+		path.shape-overlays__path
+
+	+b.MAIN.section_main
+		+b.SECTION.section_school
+			include include/_2section
+			.texr-block__school
+				.container
+					p.school-foot__text
+						| “ I just wanted to say a sincere thankyou for an amazing cooker course last month. I can’t describe  how good your food tastes! Your flavours are magic! And the sweet, salty, combo, sour combo you taught us, that is important for every recipe has made such a difference to my cooking. ”
+					span.tags CHARLOTTE, BANKER, LONDON

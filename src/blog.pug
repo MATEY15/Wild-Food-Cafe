@@ -1,0 +1,19 @@
+extends layout.pug
+
+block prepend header-two
+	- var selected = 'blog'
+	include include/header-blog
+
+block prepend main
+	svg.shape-overlays(viewbox='0 0 100 100', preserveaspectratio='none')
+		path.shape-overlays__path
+		path.shape-overlays__path
+		path.shape-overlays__path
+
+	+b.MAIN.section_main
+		include include/section-blog
+		.brand-blue
+			include include/_3section
+
+	block footer
+		include include/footer

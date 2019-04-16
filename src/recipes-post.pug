@@ -1,0 +1,53 @@
+extends layout.pug
+
+block prepend main
+	svg.shape-overlays(viewbox='0 0 100 100', preserveaspectratio='none')
+		path.shape-overlays__path
+		path.shape-overlays__path
+		path.shape-overlays__path
+
+	+b.MAIN.section_main
+
+		+b.SECTION.section--recipes-post
+			.recipes-post
+				+b.wrapper__recipes-post
+					+b.DIV.recipes-post-head_
+						+e.__name
+							h3.heading-small__blue
+								a(href="recipes.html") Recipes
+						+e.__back
+							a(href="#").link-back Back
+						+e.__back
+							a(href="#").link-back Next
+					+b.DIV.recipes__post-content_
+						+e.__heading
+							h1
+								| TRUFFLE, MUSHROOM 
+								br
+								| AND ROSEMARY PIZZA
+							p | 12 FEBRUARY 2019
+
+						.post-content
+							p
+								| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus pretium felis at dignissim. Morbi vel leo non est luctus tempor. Phasellus vel magna at elit sagittis luctus eu condimentum augue. Sed placerat magna iaculis iaculis feugiat. Aliquam erat volutpat. Aliquam nec velit ut enim fringilla rhoncus. Mauris non nisi ligula. Morbi id ultrices lectus. Pellentesque ut risus a sem scelerisque commodo ut volutpat orci. Suspendisse hendrerit pellentesque tellus sed dignissim. Etiam at fermentum lorem. Duis et diam sed lectus imperdiet tincidunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus pretium felis at dignissim. Morbi vel leo non est luctus tempor. 
+
+						.share-post
+							.wrap__share-social
+								.share-social
+									.share-center
+										span SHARE
+										ul.share-social__list
+											li
+												a(href="#")
+													+e.SVG.__facebook
+														USE(xlink:href="img/sprite.svg#facebook")
+													span 21
+											li
+												a(href="#")
+													+e.SVG.__twitter
+														USE(xlink:href="img/sprite.svg#twitter")
+													span 45
+
+				+b.wrapper__recipes-images
+					.recipes-images__full
+						img(src="img/recipe-post.jpg", alt="")

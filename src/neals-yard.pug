@@ -1,0 +1,50 @@
+extends layout.pug
+
+block prepend header-light
+	- var selected = 'Neals Yard Refresh'
+	include include/header-light
+
+block prepend main
+	svg.shape-overlays(viewbox='0 0 100 100', preserveaspectratio='none')
+		path.shape-overlays__path
+		path.shape-overlays__path
+		path.shape-overlays__path
+
+	+b.MAIN.section_main
+
+		section.post-events
+
+			.menu-category
+				.container
+					+b.NAV.default-menu_
+						+b.UL.default-list_
+							+navMenu('RECIPES', '#')
+							+navMenu('CAFE LIFE', '#')
+							+navMenu('JOEL & AISTE', '#')
+							+navMenu('WELLBEING', '#')
+
+			+b.DIV.post-big_
+				.container
+					+e.DIV.__wrapper
+						+e.DIV.__images
+							img(src="img/big-post.jpg", alt="")
+						+e.DIV.__content
+							+e.H1.__heading
+								| NEAL’S YARD REFRESH
+								+e.SPAN.__date
+									| | 12 FEBRUARY 2019
+							+e.P.__text
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus pretium felis at dignissim. Morbi vel leo non est luctus tempor. Phasellus vel magna at elit sagittis luctus eu condimentum augue. Sed placerat magna iaculis iaculis feugiat. Aliquam erat volutpat. Aliquam nec velit ut enim fringilla rhoncus. Mauris non nisi ligula. Morbi id ultrices lectus. Pellentesque ut risus a sem scelerisque commodo ut volutpat orci. Suspendisse hendrerit pellentesque tellus sed dignissim. Etiam at fermentum lorem. Duis et diam sed lectus imperdiet tincidunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus pretium felis at dignissim. Morbi vel leo non est luctus tempor. Phasellus vel magna at elit sagittis luctus eu condimentum augue. Sed placerat magna iaculis iaculis feugiat. Aliquam erat volutpat. Aliquam nec velit ut enim fringilla rhoncus. Mauris non nisi ligula. Morbi id ultrices lectus. Pellentesque ut risus a sem scelerisque commodo ut volutpat orci. 
+					.line-gradient
+
+			.container
+				+b.DIV.post-small_
+					include include/_items-small-post
+					include include/_items-small-post
+					include include/_items-small-post
+					include include/_items-small-post
+					include include/_items-small-post
+					include include/_items-small-post
+
+				.read-arrow
+					a(href="#").read-arrow__icon

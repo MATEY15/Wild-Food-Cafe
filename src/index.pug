@@ -1,5 +1,8 @@
 extends layout.pug
 
+block variable
+	- var slideName = 'EVENTS'
+
 block prepend header-one
 	- var selected = 'index'
 	include include/header
@@ -11,12 +14,19 @@ block prepend main
 		path.shape-overlays__path
 
 	+b.MAIN.section_main
-		//- include include/motion-capture
-		//- include include/section-device
-		//- include include/section-description
-		//- include include/section-news
-		//- include include/section-start
-		//- include include/footer
+		include include/_1section
+		include include/_2section
+		include include/_3section
+		include include/_4section
+		include include/_5section
+		+b.SECTION.team-shop
+			include include/_6section
+			include include/_7section
+		include include/_8section
+
+	block prepend footer
+		include include/footer
+		
 		//- +b.SECTION.new-section
 		//- 	| Main
 		//- a.button--call#create-cup-open

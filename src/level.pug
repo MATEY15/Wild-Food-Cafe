@@ -1,0 +1,46 @@
+extends layout.pug
+
+block prepend main
+	svg.shape-overlays(viewbox='0 0 100 100', preserveaspectratio='none')
+		path.shape-overlays__path
+		path.shape-overlays__path
+		path.shape-overlays__path
+
+	+b.MAIN.section_main
+		+b.SECTION.section_level
+			.container-full.flex-wrapper
+				+b.DIV.level-text_
+					+e.__head
+						+e.__link
+							a(href="#") Back
+						+e.__name
+							span LEVEL 4
+							h1
+								| Advanced Plant Based 
+								br 
+								| Chef Intensive Training
+							p
+								| WEEK-LONG | FULL-TIME |
+								strong PROFESSIONAL TRAINING PROGRAMME 
+						+e.__link
+							a(href="#") Next
+					+e.__content
+						h4 BRIDGING NUTRITIOUS & DELICIOUS
+						p This one of a kind programme draws on rich, internationally acclaimed culinary expertise of Wild Food Cafe and provides comprehensive leading-edge tools for the raw & plant food chefs and holistic wellbeing leadership for those who intend to incorporate new generation raw-centric plant food practices in their career, group work, professional or personal development.
+						h4 AN INTEGRAL APPRAOCH TO WELLBEING
+						p Food and wellbeing has to do with so much more than what’s on our plate. This training is designed to provide a thorough foundation in understanding different food, wellbeing modalities and leadership practices that are all-inclusive and empowering to promote both individuality and all-inclusivity in food and groups.
+						h4 WHO IS IT FOR
+						p The programme is designed for those with a background (and/or interest) in food, nutrition and wellbeing looking to bridge the gap into the practical field of plant food. All spectrum wellbeing practitioners and retreat leaders that work with groups; or simply those looking to gain new skills in life or are seeking a new career direction. This training will give you confidence and strong practical skills to work in a professional plant-based kitchen; a foundation to understand plant-food and the art of nourishment from a broader perspective; open your own plant-food venture; or to incorporate leading-edge plant-food and holistic wellbeing understanding and practice into your existing project.
+						h4 SCHEDULE
+						p Full time / 5 days a week / 9am – 5pm (times might vary) 
+						h4 LOCATION
+						p London, Uxbridge 
+						h4 Fess
+						p £1950 or 3 instalments of £650.00, 20% VAT inclusive
+					+e.__button
+						a(href="#").botton-big BOOK
+				+b.DIV.level-images_
+					+e.__big
+						img(src="img/level1.jpg", alt="")
+					+e.__small
+						img(src="img/level2.jpg", alt="")

@@ -1,0 +1,76 @@
+.section--sellers
+	padding-top 40px
+	h3
+		font-size 18px
+		ffa(JournalSansNew-Bold)
+		ls(2px)
+		text-align center
+		c cBlueDark
+		margin-bottom 40px
+
+.wrapper-sellers
+	@media screen and (max-width: 600px)
+		padding-left 0
+		padding-right 0
+
+.sellers-content
+	display flex
+	flex-direction row
+	flex-wrap wrap
+	justify-content space-around
+	margin-left -15px
+	margin-right -15px
+	@media screen and (max-width: 1200px)
+		margin-left 0
+		margin-right 0
+	&__item
+		width 33.3%
+		max-width 380px
+		padding-left 15px
+		padding-right 15px
+		margin-bottom 40px
+		text-align center
+		@media screen and (max-width: 768px)
+			width 50%
+		@media screen and (max-width: 600px)
+			padding-left 10px
+			padding-right 10px
+		@media screen and (max-width: 540px)
+			width 100%
+			max-width 300px
+		.wrap-img__seller
+			position relative
+			display inline-block
+			width 100%
+			min-height 380px
+			overflow hidden
+			margin-bottom 20px
+			@media screen and (max-width: 854px)
+				min-height 290px
+			@media screen and (max-width: 768px)
+				min-height 350px
+			@media screen and (max-width: 640px)
+				min-height 290px
+			img
+				position absolute
+				left 50%
+				top 50%
+				height 100%
+				width auto
+				tt(-50%, -50%)
+				
+		.link-seller,
+		.price
+			ffa(JournalSansNew)
+			c cBlueDark
+			text-decoration none
+		.link-seller
+			display block
+			font-size 22px
+			ls(2px)
+			margin-bottom 8px
+		.price
+			display inline-block
+			font-size 18px
+			ls(2.8px)
+		

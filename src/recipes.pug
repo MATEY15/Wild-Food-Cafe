@@ -1,0 +1,45 @@
+extends layout.pug
+
+block prepend main
+	svg.shape-overlays(viewbox='0 0 100 100', preserveaspectratio='none')
+		path.shape-overlays__path
+		path.shape-overlays__path
+		path.shape-overlays__path
+
+	+b.MAIN.section_main
+	
+		+b.SECTION.section--recipes
+			+b.wrapper-recipes.container-big
+				+b.DIV.recipes-head_
+					+e.__back
+						a(href="#").link-back Back
+					+e.__name
+						h3.heading-small__blue Recipes
+					+e.__menu
+						+b.NAV.default-menu_
+							+b.UL.default-list_
+								+navMenu('Drinks', '#')
+								+navMenu('SAVOURY', '#')
+								+navMenu('SWEET', '#')
+
+				+b.DIV.recipes-content_
+					.container
+						.owl-carousel.recipes-slide
+							.item
+								include include/_items-recipes
+								include include/_items-recipes
+							.item
+								include include/_items-recipes
+								include include/_items-recipes
+							.item
+								include include/_items-recipes
+								include include/_items-recipes
+							.item
+								include include/_items-recipes
+								include include/_items-recipes
+							.item
+								include include/_items-recipes
+								include include/_items-recipes
+							.item
+								include include/_items-recipes
+								include include/_items-recipes

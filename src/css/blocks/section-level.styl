@@ -1,0 +1,144 @@
+.section_level
+	background: cBlueLight
+	min-height 100vh
+	padding-top 60px
+	padding-bottom 60px
+	@media screen and (max-width: 854px)
+		padding-top 30px
+		padding-bottom 30px
+	.flex-wrapper
+		display flex
+		flex-direction row
+		flex-wrap wrap
+		justify-content space-between
+	
+	.level-images
+		width 50%
+		padding-left 40px
+		display flex
+		flex-direction column
+		justify-content space-between
+		@media screen and (max-width: 1700px)
+			justify-content flex-start
+		@media screen and (max-width: 1170px)
+			padding-left 20px
+		@media screen and (max-width: 854px)
+			width 100%
+			padding-left 0
+			order 1
+			margin-bottom 40px
+		&__big
+			position relative
+			display flex
+			flex 1
+			margin-bottom 10px
+			min-height 60%
+			overflow hidden
+			@media screen and (max-width: 1700px)
+				flex inherit
+				min-height auto
+				display block
+			img
+				position absolute
+				top 50%
+				left 50%
+				width 100%
+				height auto
+				tt(-50%, -50%)
+				@media screen and (max-width: 1700px)
+					position relative
+					tt(0, 0)
+					top 0
+					left 0
+					width 100%
+					max-width 100%
+		&__small
+			position relative
+			display flex
+			flex 1
+			min-height 40%
+			overflow hidden
+			@media screen and (max-width: 1700px)
+				flex inherit
+				min-height auto
+				display block
+			img
+				position absolute
+				top 50%
+				left 50%
+				width auto
+				height 100%
+				tt(-50%, -50%)
+				@media screen and (max-width: 1700px)
+					position relative
+					tt(0, 0)
+					top 0
+					left 0
+					width 100%
+					max-width 100%
+	
+	.level-text
+		width 50%
+		padding-right 40px
+		@media screen and (max-width: 1170px)
+			padding-right 20px
+		@media screen and (max-width: 855px)
+			width 100%
+			padding-right 0
+			order 2
+		&__head
+			display flex
+			flex-direction row
+			justify-content space-between
+			@media screen and (max-width: 854px)
+				flex-wrap wrap
+		&__link
+			padding-top 30px
+			a
+				font-size 14px
+				ffa(JournalSansNew-Display)
+				ls(1.75px)
+				c cBlueDark
+				text-decoration none
+				text-transform uppercase
+		
+		&__name
+			text-align center
+			c cBlueDark
+			margin-bottom 40px
+			@media screen and (max-width: 854px)
+				width 100%
+				order 3
+			span
+				display inline-block
+				font-size 15px
+				ffa(JournalSansNew-Bold)
+				ls(0.36px)
+				margin-bottom 20px
+			h1
+				font-size 24px
+				lh(36px)
+				ffa(JournalSansNew-Bold)
+				ls(0.78px)
+				margin-bottom 16px
+			p
+				font-size 12px
+				ffa(JournalSansNew)
+				ls(.55px)
+		
+		&__content
+			c cBlueDark
+			h4
+				font-size 14px
+				ffa(JournalSansNew-Bold)
+				ls(.76px)
+				margin-bottom 10px
+			p
+				font-size 14px
+				lh(20px)
+				ffa(JournalSansNew)
+				ls(.73px)
+				margin-bottom 20px
+		
+		&__button
+			margin-top 70px

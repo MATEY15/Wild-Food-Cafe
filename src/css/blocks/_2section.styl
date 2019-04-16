@@ -1,0 +1,134 @@
+.section--events
+	padding-top 70px
+	@media screen and (max-width: 992px)
+		padding-left 20px
+		padding-right 20px
+	.heading-section__blue
+		text-align center
+		margin-bottom 60px
+.event--item
+	background: #fcf5f8
+	max-width 360px
+	@media screen and (max-width: 992px)
+		margin 0 auto
+.event
+	&__event-button
+		display block
+		background: cBlueDark
+		c cWhite
+		text-align center
+		text-transform uppercase
+		text-decoration none
+		ls(2px)
+		padding 12px 10px
+		trn(.25s)
+		&:hover
+			background: #09657a
+	&__images
+		display block
+		position relative
+		height 440px
+		width 100%
+		overflow hidden
+		@media screen and (max-width: 360px)
+			height 380px
+		img
+			position absolute
+			width auto !important
+			height 100% !important
+			top 50%
+			left 50%
+			tt(-50%, -50%)
+	&-content
+		c cBlueDark
+		text-align center
+		padding 24px 20px
+		min-height 235px
+		&__heading
+			font-size 16px
+			ffa(JournalSansNew-Bold)
+			margin-bottom 10px
+		&__list
+			margin-bottom 10px
+			li
+				display inline-block
+		&__desc
+			display block
+			ffa(JournalSansNew-Oblique)
+			fz 14px
+			margin-bottom 12px
+		&__text
+			font-size 14px
+			line-height 20px
+			
+.slider-events
+	.owl-dots
+		display none
+	.owl-nav
+		position absolute
+		top 50%
+		width 100%
+		tt(0, -50%)
+	.owl-prev,
+	.owl-next
+		position absolute
+		display flex
+		span
+			font-size 0
+			display inline-block
+			width 20px
+			height 30px
+			background url(../img/slide-arrow.svg) !important
+			background-repeat no-repeat !important
+	.owl-next
+		right -50px
+		@media screen and (max-width: 1240px)
+			background: rgba(255, 255, 255, 0.8)!important
+			width 50px
+			height 50px
+			right 20px
+			justify-content center
+			br(50%)
+			span
+				margin-left 5px
+		@media screen and (max-width: 992px)
+			right 20px
+		@media screen and (max-width: 375px)
+			display none
+		span
+			transform rotateY(180deg)
+	.owl-prev
+		left -50px
+		@media screen and (max-width: 1240px)
+			background: rgba(255, 255, 255, 0.8)!important
+			width 50px
+			height 50px
+			left 20px
+			justify-content center
+			br(50%)
+			span
+				margin-right 5px
+		@media screen and (max-width: 992px)
+			left 20px
+		@media screen and (max-width: 375px)
+			display none
+			
+.section_school
+	background: cBlueLight
+
+.texr-block__school
+	padding-top 70px
+	padding-bottom 70px
+	text-align center
+	*
+		c cBlueDark
+	.school-foot__text
+		padding 0 15px
+		font-size 18px
+		ls(.5px)
+		lh(24px)
+		margin-bottom 20px
+	.tags
+		ffa(JournalSansNew-Display)
+		font-size 18px
+		ls(2.75)

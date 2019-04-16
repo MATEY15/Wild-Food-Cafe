@@ -1,3 +1,18 @@
-+b.HEADER().header_
++b.HEADER(style="background-image: url(img/header-background.jpg);").header_
 	
 	include top-line
+
+	+b.DIV.header-content_
+		.container.flex-wrapper
+
+			+e.H1.__heading
+				| FULL SPECTRUM WELL BEING
+				br
+				| GOOD FOOD | COMMUNITY | LEARNING
+				br
+				| PLANT BASED
+
+			include _1section
+			
+			+e.A(href="#head-down").__link-join.scroll-section
+				| JOIN OUR NEWSLETTER

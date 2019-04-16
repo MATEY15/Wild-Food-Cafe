@@ -1,0 +1,59 @@
+.wrapper-shop
+	.heading-section__blue
+		margin: 0 0 40px 40px
+		@media screen and (max-width: 768px)
+			margin-left 0
+			text-align center
+			
+
+.shop-content
+	border: 2px solid transparent
+	border-image: linear-gradient(to right, rgba(172,126,182,1) 0%,rgba(241,146,188,1) 19%,rgba(254,203,75,1) 35%,rgba(254,242,138,1) 55%,rgba(161,209,173,1) 73%,rgba(125,185,232,1) 100%)
+	border-image-slice: 1
+	&__images
+		@media screen and (max-width: 540px)
+			text-align center
+		img
+			@media screen and (max-width: 540px)
+				width 90%
+			@media screen and (max-width: 375px)
+				width 100%
+
+.shop-content
+	display flex
+	flex-direction row
+	align-items center
+	justify-content space-around
+	padding 40px 50px
+	@media screen and (max-width: 800px)
+		flex-direction column
+	@media screen and (max-width: 375px)
+		padding 40px 20px
+
+.shop-text
+	c cBlueDark
+	ffa(JournalSansNew)
+	text-align center
+	max-width 360px
+	@media screen and (max-width: 800px)
+		margin-bottom 30px
+	&__slogan
+		font-size 13px
+		ls(3px)
+		margin-bottom 20px
+	&__name
+		font-size 22px
+		ffa(JournalSansNew-Bold)
+		ls(2px)
+		margin-bottom 14px
+	&__desc
+		font-size 16px
+		lh(24px)
+		ls(1px)
+		margin-bottom 36px
+	a.link-more
+		font-size 16px
+		c cBlueDark
+		ls(1px)
+		text-transform uppercase
+		text-decoration none

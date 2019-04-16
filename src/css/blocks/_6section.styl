@@ -1,0 +1,52 @@
+.team-shop
+	background-image: url(../img/bg-teab-shop.jpg)
+	background-repeat no-repeat
+	background-position: right center
+
+.wrapper-team
+	display flex
+	flex-direction row
+	justify-content space-between
+	flex-wrap wrap
+	padding-bottom 70px
+	margin-left -20px
+	margin-right -20px
+	@media screen and (max-width: 1160px)
+		justify-content space-around
+	@media screen and (max-width: 1140px)
+		padding-bottom 30px
+	&__item
+		width 190px
+		padding 0 15px
+		text-align center
+		ffa(JournalSansNew)
+		c cBlueDark
+		@media screen and (max-width: 1140px)
+			margin-bottom 40px
+		h4
+			font-size 16px
+			ffa(JournalSansNew-Bold)
+			ls(1px)
+			margin-bottom 10px
+		.slog
+			font-size 15px
+			ls(1px)
+			margin-bottom 12px
+		.desc
+			font-size 13px
+			ls(1px)
+			lh(18px)
+
+	&__images
+		position relative
+		width 150px
+		height 150px
+		br(50%)
+		overflow hidden
+		margin 0 auto 24px
+		img
+			position absolute
+			top 50%
+			left 50%
+			width 100%
+			tt(-50%, -50%)

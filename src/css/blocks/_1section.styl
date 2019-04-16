@@ -1,0 +1,61 @@
+.choice
+	background: cBlueDark
+	width 100%
+	@media screen and (max-width: 600px)
+		display none
+	.pink-color
+		background: cPink
+		c cPinkDark
+	&__wrapper
+		display flex
+		flex-direction row
+		flex-wrap wrap
+		@media screen and (max-width: 600px)
+			flex-direction column
+		&:after
+			display block
+			width 100%
+			content ""
+			height 5px
+			background linear-gradient(to right, rgba(172,126,182,1) 0%,rgba(241,146,188,1) 19%,rgba(254,203,75,1) 35%,rgba(254,242,138,1) 55%,rgba(161,209,173,1) 73%,rgba(125,185,232,1) 100%)
+			@media screen and (max-width: 600px)
+				display none
+
+	&__items
+		ffa(JournalSansNew-Display)
+		width 50%
+		padding 34px 30px 20px
+		text-align center
+		c cYellow
+		@media screen and (max-width: 720px)
+			padding 34px 15px 20px
+		@media screen and (max-width: 600px)
+			width 100%
+			padding 10px 15px 10px
+	&__head
+		display inline-block
+		font-size 14px
+		text-transform uppercase
+		ls(2px)
+		margin-bottom 20px
+		@media screen and (max-width: 600px)
+			margin-bottom 10px
+			font-size 12px
+	&__name
+		font-size: 27px
+		text-transform uppercase
+		ls(3px)
+		ffa(JournalSansNew)
+		margin-bottom 10px
+		@media screen and (max-width: 600px)
+			display none
+	&__slogan
+		font-size 18px
+		text-transform uppercase
+		ls(2px)
+		margin-bottom 24px
+		@media screen and (max-width: 600px)
+			font-size 16px
+			margin-bottom 10px
+	&__descript
+		font-size 16px
