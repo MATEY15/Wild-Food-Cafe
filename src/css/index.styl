@@ -41,12 +41,21 @@ p
 	ffa(JournalSansNew)
 	lh(24px)
 	ls(1.25px)
-	c cBlueDark
+	// c cBlueDark
 
 .line-gradient
 	height 4px
 	width 100%
 	background: gradient
+
+i
+	ff(JournalSansNew-Oblique)
+	font-weight normal
+
+.height-20
+	height 20px
+.height-28
+	height 28px
 
 // h1, h2, h3, h4, h5, h6
 // 	font-family: fPoppinsSemiBold
@@ -80,7 +89,7 @@ p
 	margin 0 auto
 
 .container-full
-	max-width 1800px
+	max-width 1400px
 	width 100%
 	padding-left 20px
 	padding-right 20px
@@ -91,7 +100,7 @@ h3.heading-section__white
 	ffa(JournalSansNew-Bold)
 	font-size 28px
 	text-transform uppercase
-	ls(2px)
+	ls(2.8px)
 	a
 		c cBlueDark
 		text-decoration none
@@ -105,7 +114,7 @@ h3.heading-small__white
 	ffa(JournalSansNew-Bold)
 	font-size 18px
 	text-transform uppercase
-	ls(2px)
+	ls(2.5px)
 	a
 		c cBlueDark
 		text-decoration none
@@ -118,21 +127,29 @@ h3.heading-small__white
 .link-back
 	font-size 14px
 	ffa(JournalSansNew-Display)
-	ls(1.75px)
+	ls(2.5px)
 	c cBlueDark
 	text-decoration none
 	text-transform uppercase
 
 .default-menu
 	.default-list
+		@media screen and (max-width: 600px)
+			text-align center
 		&__li
 			display inline-block
 		&__li:not(:last-child)
 			margin-right 40px
+			@media screen and (max-width: 600px)
+				margin-right 20px
+				margin-bottom 10px
+			@media screen and (max-width: 480px)
+				margin-right 10px
+				margin-left 10px
 		&__link
 			font-size 14px
 			ffa(JournalSansNew-Display)
-			ls(1.75px)
+			ls(2.5px)
 			c cBlueDark
 			text-transform uppercase
 
@@ -154,9 +171,9 @@ h3.heading-small__white
 	background: cWhite
 	padding-left 30px
 	padding-right 30px
-	@media screen and (max-width: 414px)
-		padding-left 20px
-		padding-right 20px
+	@media screen and (max-width: 768px)
+		padding-left 15px
+		padding-right 15px
 	.share-center
 		display flex
 		flex-direction row
@@ -169,6 +186,8 @@ h3.heading-small__white
 		text-transform uppercase
 		c cBlueDark
 		padding-right 12px
+		@media screen and (max-width: 768px)
+			font-size 16px
 	
 	&__list
 		display inline-block
@@ -186,8 +205,29 @@ h3.heading-small__white
 					fill cWhite
 					width 24px
 					height 24px
+					@media screen and (max-width: 768px)
+						width 22px
+						height 22px
 				span
 					display inline-block
 					margin-left 10px
 					c cWhite
 					padding-right 0
+
+.navigation-post
+	display flex
+	flex-direction row
+	justify-content space-between
+	.nav-post
+		display flex
+		align-items center
+		a
+			font-size 24px
+			ffa(JournalSansNew)
+			c cBlueDark
+			text-decoration none
+
+.gradient-border
+	border: 2px solid transparent
+	border-image: linear-gradient(to right, rgba(172,126,182,1) 0%,rgba(241,146,188,1) 19%,rgba(254,203,75,1) 35%,rgba(254,242,138,1) 55%,rgba(161,209,173,1) 73%,rgba(125,185,232,1) 100%)
+	border-image-slice: 1

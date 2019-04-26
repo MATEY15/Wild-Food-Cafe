@@ -1,0 +1,123 @@
+extends layout.pug
+
+block prepend header-shop
+	- var selected = 'shop'
+	include include/header-shop
+
+block prepend main
+	svg.shape-overlays(viewbox='0 0 100 100', preserveaspectratio='none')
+		path.shape-overlays__path
+		path.shape-overlays__path
+		path.shape-overlays__path
+
+	+b.MAIN.section_main
+		//- +b.SECTION.shop-view_
+		+b.SECTION.product-all_
+			.container
+				.product-all__wrapper
+					include include/filter-cart
+
+					.main-product
+						.cart-wrapper.gradient-border
+							form.delivery-wrapper
+
+								.delivery-wrapper__items
+									h3 BILLING DETAILS
+									.delivery-forms
+										.delivery-forms-100
+											.height-20
+										.delivery-forms-50
+											label.error First Name
+											input
+										.delivery-forms-50
+											label.error Last Name
+											input
+										.delivery-forms-100
+											label Company Name
+											input
+										.delivery-forms-50
+											label.error Email Address
+											input
+										.delivery-forms-50
+											label Phone
+											input
+										.delivery-forms-100
+											label Country
+											.custom-select
+												select
+													option(value="0") United Kingdom (UK)
+													option(value="1") United Kingdom (UK)
+													option(value="2") United Kingdom (UK)
+													option(value="3") United Kingdom (UK)
+													option(value="4") United Kingdom (UK)
+													option(value="5") United Kingdom (UK)
+										.delivery-forms-100
+											label Address
+											input(placeholder="Street address")
+											input(placeholder="Apartment, suite, unit etc (optional)")
+										.delivery-forms-100
+											label.error Town / City
+											input
+										.delivery-forms-50
+											label County
+											input
+										.delivery-forms-50
+											label.error Postcode
+											input
+										.delivery-forms-100
+											.height-28
+										.delivery-forms-100
+											button.button-product Submit
+
+
+								.delivery-wrapper__items
+									h3 SHIPPING
+									.delivery-forms
+										.delivery-forms-100
+											label.checkbox
+												input(type="checkbox" required="")
+												p.checkbox__text Same as billing
+										.delivery-forms-50
+											label.error First Name
+											input
+										.delivery-forms-50
+											label.error Last Name
+											input
+										.delivery-forms-100
+											label Company Name
+											input
+										.delivery-forms-50
+											label.error Email Address
+											input
+										.delivery-forms-50
+											label Phone
+											input
+										.delivery-forms-100
+											label Country
+											.custom-select
+												select
+													option(value="0") United Kingdom (UK)
+													option(value="1") United Kingdom (UK)
+													option(value="2") United Kingdom (UK)
+													option(value="3") United Kingdom (UK)
+													option(value="4") United Kingdom (UK)
+													option(value="5") United Kingdom (UK)
+										.delivery-forms-100
+											label Address
+											input(placeholder="Street address")
+											input(placeholder="Apartment, suite, unit etc (optional)")
+										.delivery-forms-100
+											label.error Town / City
+											input
+										.delivery-forms-50
+											label County
+											input
+										.delivery-forms-50
+											label.error Postcode
+											input
+										.delivery-forms-100
+											label Order Notes
+											textarea(placeholder="Notes about your order, e.g. any special notes for delivery etc.")
+
+
+	include include/footer

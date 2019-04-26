@@ -1,0 +1,53 @@
+.header-shop
+	background: cBlueDark
+	@media screen and (max-width: 540px)
+		padding-bottom 20px
+	.shop-line
+		display flex
+		flex-direction row
+		justify-content space-between
+		align-items center
+		height 100px
+		padding-left 40px
+		padding-right 40px
+		@media screen and (max-width: 720px)
+			padding-left 20px
+			padding-right 20px
+		@media screen and (max-width: 540px)
+			flex-wrap wrap
+		&__name
+			display flex
+			img
+				@media screen and (max-width: 720px)
+					width 300px
+			@media screen and (max-width: 540px)
+				order 1
+				width 100%
+				justify-content center
+		&__logo
+			@media screen and (max-width: 540px)
+				order 2
+		&__cart
+			@media screen and (max-width: 540px)
+				order 3
+		.logo-shop
+			svg
+				width 34px
+				height 34px
+				fill cPinkL
+		.gocart
+			display flex
+			flex-direction row
+			align-items flex-end
+			text-decoration none
+			svg
+				width 34px
+				height 34px
+				fill cWhite
+				margin-right 10px
+			span
+				font-size 22px
+				font-weight normal
+				ffa(JournalSansNew)
+				c cWhite
+				

@@ -1,6 +1,9 @@
 +b.SECTION.section--shop
 	+b.wrapper-shop.container
-		h3.heading-section__blue Shop
+		if(inTrue)
+			h3.heading-section__blue #{shopName}
+		else
+			
 		+b.DIV.shop-content
 			+b.DIV.shop-text_
 				+e.P.__slogan FEATURED PRODUCT

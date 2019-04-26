@@ -1,0 +1,65 @@
+extends layout.pug
+
+block prepend header-shop
+	- var selected = 'shop'
+	include include/header-shop
+
+block prepend main
+	svg.shape-overlays(viewbox='0 0 100 100', preserveaspectratio='none')
+		path.shape-overlays__path
+		path.shape-overlays__path
+		path.shape-overlays__path
+
+	+b.MAIN.section_main
+		//- +b.SECTION.shop-view_
+		+b.SECTION.product-all_
+			.container
+				.product-all__wrapper
+					include include/filter-cart
+
+					.main-product
+						.cart-wrapper.gradient-border
+							.cart-product
+								.cart-product__items
+									.product-checked
+										button.delete
+											img(src="img/closed-gray.svg", alt="", width="14px")
+										.cart-img
+											img(src="img/sellers/sellers2.jpg", alt="")
+										a(href="#").names
+											span Raw Cacao Paste Arribica Nacional | Organic
+											span 500g
+									.price--wrapper
+										p.price £17.99
+										.count-cart
+											input(value="1")
+										p.price £17.99
+
+								.cart-product__items
+									.product-checked
+										button.delete
+											img(src="img/closed-gray.svg", alt="", width="14px")
+										.cart-img
+											img(src="img/sellers/sellers2.jpg", alt="")
+										a(href="#").names
+											span Raw Cacao Paste Arribica Nacional | Organic
+											span 500g
+									.price--wrapper
+										p.price £17.99
+										.count-cart
+											input(value="1")
+										p.price £17.99
+
+							.cart-total
+								.cart-total__content
+									button.button-product.button-disabled Update basket
+									ul.shipping
+										li Shipping
+											span £3.50
+										li VAT
+											span £0.70
+									p.total-text TOTAL  
+										span £34.64
+									button.button-product Checkout
+
+	include include/footer

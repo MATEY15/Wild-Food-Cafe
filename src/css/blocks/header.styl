@@ -2,13 +2,18 @@
 	position relative
 	height 100vh
 	min-height 667px
-	// background-image: url(/img/header-background.jpg)
+	background-size cover
+	background-repeat no-repeat
+	background-position: center 0
 	@media screen and (max-width: 1023px)
 		background-position: top right
 	@media screen and (max-width: 600px)
 		background-position: center
 .top-line__light
 	background: cBlueLight
+	@media screen and (max-width: 600px)
+		min-height 667px
+		background: cBlueDark
 .top-line
 	position relative
 	height 80px
@@ -54,18 +59,33 @@
 		text-decoration none
 		font-family: fPoppinsBold
 		font-size 21px
+		height 37px
+		width 300px
+		img
+			display block
+		@media screen and (max-width: 1200px)
+			width 100%
 		@media screen and (max-width: 600px)
 			display block
 	&__svg
-		width 36px
-		height 36px
+		width 320px
+		height 40px
 		fill cBlueDark
 		margin-right 14px
+		@media screen and (max-width: 1300px)
+			width 290px
+		@media screen and (max-width: 1200px)
+			width 250px
 		@media screen and (max-width: 600px)
+			display none
 			fill cWhite
 			margin-right 0
 			width 50px
 			height 50px
+		&.logo-small
+			display none
+			@media screen and (max-width: 600px)
+				display block
 	&__name
 		display inline-block
 		font-family: JournalSansNew
@@ -89,12 +109,16 @@
 .social-top
 	margin-right 30px
 	padding-top 2px
+	@media screen and (max-width: 1165px)
+		margin-right 20px
 	@media screen and (max-width: 600px)
 		display none
 	&__li
 		display inline-block
 	&__li:not(:last-child)
 		margin-right 10px
+		@media screen and (max-width: 1165px)
+			margin-right 5px
 	&__link
 		display inline-block
 		svg
@@ -133,8 +157,8 @@
 			display inline-block
 			&:not(:last-child)
 				margin-right 14px
-				@media screen and (max-width: 1100px)
-					margin-right 12px
+				@media screen and (max-width: 1160px)
+					margin-right 8px
 				@media screen and (max-width: 1023px)
 					margin-right 0
 					display block
@@ -145,7 +169,10 @@
 				font-family: JournalSansNew-Display
 				text-transform uppercase
 				text-decoration none
-				@media screen and (max-width: 1100px)
+				ls(2.5px)
+				@media screen and (max-width: 1300px)
+					ls(.5px)
+				@media screen and (max-width: 1140px)
 					font-size 13px
 				@media screen and (max-width: 1023px)
 					font-size 18px
@@ -153,7 +180,7 @@
 				position absolute
 				left -10px
 				top calc(100% + 20px)
-				min-width 120px
+				min-width 140px
 				padding-top 34px
 				opacity 0
 				visibility hidden
@@ -298,8 +325,8 @@
 		width 100%
 		tt(-50%, 0)
 		font-family: JournalSansNew-Bold
-		font-size 20px
-		letter-spacing 2px
+		font-size 18px
+		letter-spacing 2.5px
 		text-align center
 		c cBlueDark
 		@media screen and (max-width: 768px)
@@ -327,6 +354,8 @@
 .header-blog
 	background-position: center 0
 	background-attachment fixed
+	border-right none
+	background-size cover
 
 .blog-header__content
 	flex 1

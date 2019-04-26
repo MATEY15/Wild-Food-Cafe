@@ -1,0 +1,355 @@
+.shop-view
+	padding-top 40px
+
+.product-all
+	margin-top 40px
+
+.product-all__wrapper
+	display flex
+	flex-direction row
+	@media screen and (max-width: 854px)
+		flex-direction column
+		align-items center
+
+.filter-product
+	position: relative
+	margin-right: 20px
+	flex-basis: 320px
+	width 100%
+	max-width: 300px
+	min-width: 300px
+	@media screen and (max-width: 854px)
+		margin-right 0
+		margin-bottom 40px
+		flex-basis: auto
+
+.main-product
+	width 100%
+	display flex
+	flex-direction column
+	justify-content space-between
+	margin 0 -10px
+	@media screen and (max-width: 1160px)
+		margin 0
+	.product-desc,
+	.share-prod
+		padding 0 10px
+
+.wrapper-product
+	width 100%
+	display flex
+	flex-direction row
+	flex-wrap wrap
+	justify-content space-between
+	@media screen and (max-width: 1160px)
+		justify-content space-around
+	@media screen and (max-width: 854px)
+		margin 0
+	
+	.product-items
+		padding-left 10px
+		padding-right 10px
+		flex-basis 280px
+		flex-shrink 0
+		margin-bottom 40px
+		
+		&__images
+			position relative
+			display inline-block
+			width 100%
+			height 285px
+			overflow hidden
+			margin-bottom 14px
+			img
+				position absolute
+				top 50%
+				left 50%
+				content ""
+				display block
+				width auto
+				height 100%
+				tt(-50%, -50%)
+			span
+				position absolute
+				bottom 0
+				left 0
+				display block
+				width 100%
+				padding 14px 10px
+				background: cPinkL
+				font-size 18px
+				ffa(JournalSansNew-Display)
+				ls(2.5px)
+				c cBlueDark
+				text-align center
+		
+		&__name
+			display block
+			font-size 18px
+			ffa(JournalSansNew)
+			ls(2.5px)
+			text-align center
+			text-decoration none
+			c cBlueDark
+			margin-bottom 4px
+		
+		&__date
+			display block
+			font-size 16px
+			ffa(JournalSansNew-Display)
+			text-align center
+			ls(2.5px)
+			c cBlueDark
+
+/* TABS */
+
+.link-all
+	&:not(:last-child)
+		margin-bottom 10px
+	&__button
+		position relative
+		display block
+		font-size 18px
+		ffa(JournalSansNew-Display)
+		font-weight normal
+		text-decoration none
+		text-transform uppercase
+		text-align center
+		ls(3.5px)
+		c cWhite
+		background: cBlueDark
+		padding 14px 15px
+		margin-bottom 10px
+
+.name-tab,
+.link-all__button-light
+	position relative
+	display block
+	font-size 18px
+	ffa(JournalSansNew-Display)
+	font-weight normal
+	text-decoration none
+	text-transform uppercase
+	ls(3.5px)
+	c cBlueDark
+	text-align center
+	background: cBlueLight
+	padding 14px 15px
+	trn(.25s)
+
+.link-all__button-light:hover,
+.link-all__button-light.is-active
+	c cWhite
+	background: cBlueDark
+
+.filter-product
+	&__tabs
+		a
+			text-decoration none
+		
+		ul
+			padding-top 40px
+			padding-bottom 40px
+			li
+				p
+					font-size 16px
+					lh(18px)
+					ls(3px)
+					ffa(JournalSansNew-Display)
+					font-weight normal
+					text-transform uppercase
+					c cBlueDark
+				&:not(:last-child)
+					margin-bottom 14px
+				
+
+/* Checbox */
+
+.checkbox 
+	display block
+	margin-bottom 14px
+	&:last-child 
+		margin-bottom 0
+	input 
+		display none
+		z-index -1
+		opacity 0
+		&:checked 
+			& + .checkbox__text 
+				&:before 
+					background url(../img/chekbox.png)
+					background-repeat no-repeat
+					background-position center
+.checkbox__text 
+	position relative
+	padding 0 0 0 30px
+	cursor pointer
+	display inline-block
+	user-select none
+	&:before 
+		content ''
+		position absolute
+		top 0px
+		left 0
+		width 14px
+		height 14px
+		border 2px solid cBlueDark
+		background-color #fff
+
+/* PRODUCT */
+
+.product-desc
+	display flex
+	flex-wrap wrap
+	@media screen and (max-width: 1022px)
+		flex-direction column
+		align-items center
+	&__slider,
+	&__content
+		width 50%
+		@media screen and (max-width: 1022px)
+			width 100%
+	&__slider
+		max-width 420px
+		padding-right 20px
+		@media screen and (max-width: 1022px)
+			padding-right 0
+		.slide-product
+			.owl-dots
+				text-align right
+				.owl-dot
+					display inline-block
+					width 10px
+					height 10px
+					background: #dadada
+					br(50%)
+					&:not(:last-child)
+						margin-right 2px
+					&.active
+						background: cBlueDark
+					
+	&__text
+		padding-top 30px
+		width 100%
+		max-width 760px
+		c cBlueDark
+		h3
+			fff(20px, JournalSansNew, 2.5px)
+			margin-bottom 16px
+		p
+			margin-bottom 16px
+	
+	&__content
+		display flex
+		flex-direction column
+		justify-content center
+		text-align center
+		@media screen and (max-width: 1022px)
+			max-width 420px
+		.heading-product
+			c cBlueDark
+			.heading--product
+				font-size 20px
+				ffa(JournalSansNew)
+				font-weight normal
+				ls(3px)
+				margin-bottom 8px
+			.price--product
+				font-size 15px
+				ffa(JournalSansNew-Display)
+				ls(2.5px)
+				margin-bottom 16px
+			.description--product
+				fff(15px, JournalSansNew, .5px)
+	
+.share-prod
+	margin-top 50px
+	margin-bottom 70px
+	
+/* Select */
+
+.select-product
+	position relative
+	display flex
+	flex-direction row
+	flex-wrap wrap
+	justify-content center
+	margin-top 30px
+	margin-bottom 30px
+	@media screen and (max-width: 380px)
+		flex-direction column
+	.custom-select:not(:last-child)
+		margin-right 20px
+		@media screen and (max-width: 380px)
+			margin-right 0
+			margin-bottom 20px
+
+.custom-select
+	fff(15px, JournalSansNew, 2.5px)
+	c cBlueDark
+	min-width 160px
+	position relative
+	select 
+		display none
+.select-selected 
+	fff(15px, JournalSansNew, 2.5px)
+	padding 6px 16px
+	c cBlueDark
+	outline none
+	border 2px solid cBlueDark
+	background-color #fff
+	cursor pointer
+	&.select-arrow-active 
+		&:after
+			transform rotateZ(-135deg)
+	&:after 
+		position absolute
+		content ""
+		top 12px
+		right 12px
+		width 6px
+		height 6px
+		border-style solid
+		border-width 0 2px 2px 0
+		border-color #0a4e5e
+		z-index 2
+		pointer-events none
+		transition all .25s ease-out
+		transform rotateZ(45deg)
+.select-items 
+	opacity 1
+	visibility visible
+	position absolute
+	font-size 13px
+	c cBlueDark
+	background: cWhite
+	top 110%
+	left 0
+	right 0
+	z-index 99
+	transition all .1s ease-in-out
+	box-shadow 0 6px 12px rgba(0, 0, 0, 0.175)
+	div 
+		c cBlueDark
+		padding 8px 16px
+		cursor pointer
+		&:hover 
+			background #e0ebf1
+.select-hide 
+	opacity 0
+	visibility hidden
+	top 140%
+.select-items div:hover, .same-as-selected 
+	background #e0ebf1
+.wrapper 
+	max-width 960px
+	margin 80px auto
+.wrapper-item 
+	width 180px
+	padding 0 10px
+	float left
+
+.wrapper__button-product
+	text-align center
+	button
+		margin 0 auto

@@ -1,0 +1,135 @@
+extends layout.pug
+
+block prepend header-shop
+	- var selected = 'shop'
+	include include/header-shop
+
+block prepend main
+	svg.shape-overlays(viewbox='0 0 100 100', preserveaspectratio='none')
+		path.shape-overlays__path
+		path.shape-overlays__path
+		path.shape-overlays__path
+
+	+b.MAIN.section_main
+		+b.SECTION.product-all_
+			.container
+				.product-all__wrapper
+					+b.DIV.filter-product_
+						.link-all
+							a(href="#").link-all__button VIEW ALL
+						+e.DIV.__tabs
+							h3.name-tab INGREDIENTS
+							ul
+								li
+									label.checkbox
+										input(type="checkbox" required="")
+										p.checkbox__text
+											| SUPERFOODS
+								li
+									label.checkbox
+										input(type="checkbox" required="")
+										p.checkbox__text
+											| SUPERHERBS
+								li
+									label.checkbox
+										input(type="checkbox" required="")
+										p.checkbox__text
+											| WELL BEING SUPPLEMENTS
+								li
+									label.checkbox
+										input(type="checkbox" required="")
+										p.checkbox__text
+											| RAW CACAO RANGE
+
+						+e.DIV.__tabs
+							h3.name-tab MERCHANDISE
+							ul
+								li
+									label.checkbox
+										input(type="checkbox" checked required="")
+										p.checkbox__text
+											| CLOTHING
+								li
+									label.checkbox
+										input(type="checkbox" required="")
+										p.checkbox__text
+											| GIFT VOUCHERS
+								li
+									label.checkbox
+										input(type="checkbox" required="")
+										p.checkbox__text
+											| TOTE BAG
+
+					.main-product
+
+						+b.DIV.product-desc_
+							+e.DIV.__slider
+								.owl-carousel.slide-product
+									item
+										img(src="img/sellers/sellers2.jpg", alt="")
+									item
+										img(src="img/sellers/sellers3.jpg", alt="")
+									item
+										img(src="img/sellers/sellers4.jpg", alt="")
+							+e.DIV.__content
+								.heading-product
+									h2.heading--product Incan Berries | Organic
+									p.price--product £16.80 - 30.49
+									p.description--product Incan berries go by a variety of different names including the Golden berry, Aztec berry and Peruvian cherry to name but a few. Highest protein fruit grown in the Andes. Chew them as they are or soak and add them to your salads, smoothies and other dishes. Adds wonderful tangy-ness and sweetness to your dishes.
+								
+								form.form-product
+
+									.select-product
+										.custom-select
+											select
+												option(value="0") 500g
+												option(value="1") 100g
+												option(value="2") 200g
+												option(value="3") 300g
+												option(value="4") 400g
+												option(value="5") 500g
+
+										.custom-select
+											select
+												option(value="0") 1
+												option(value="1") 2
+												option(value="2") 3
+												option(value="3") 4
+												option(value="4") 5
+												option(value="5") 6
+									
+									.wrapper__button-product
+										button(type="sibmit").button-product Add to basket
+										//- button(type="sibmit").button-product Go to checkout
+										//- button(type="sibmit").button-product Continue shopping
+
+							
+							+e.DIV.__text
+								h3 Description
+								p Incan berries go by a variety of different names including the Golden berry, Aztec berry and Peruvian cherry to name but a few. They have been harnessed by indigenous tribes for centuries, as both a valuable source of food and a traditional medicine, used in the treatment of a number of ailments. Known to have a mildly laxative effect, promotes healthy metabolism and bowel health.
+								p It is an excellent addition to your raw-some kitchen pantry. This berry is  rich in protein, vitamin C, vitamin A and group B vitamins and helps support healthy skin, hair, eyesight and maintain high levels of energy.
+								p We love just to snack on Incan berries – it is our favourite airport/transit snack. They are also amazing soaked and added to salads, made into a salad dressing, or coated in raw chocolate.
+
+						.share-prod
+							.wrap__share-social
+								.share-social
+									.share-center
+										span SHARE
+										ul.share-social__list
+											li
+												a(href="#")
+													+e.SVG.__facebook
+														USE(xlink:href="img/sprite.svg#facebook")
+													span 21
+											li
+												a(href="#")
+													+e.SVG.__twitter
+														USE(xlink:href="img/sprite.svg#twitter")
+													span 45
+
+						.wrapper-product
+							+product('Incan Berries', '£30.49', 'img/sellers/sellers2.jpg', 'shop-product.html')
+							+productBS('MSM Pure Crystal Capsules', '£30.49', 'img/sellers/sellers3.jpg', 'shop-product.html')
+							+productBS('MSM Pure Crystal Capsules', '£30.49', 'img/sellers/sellers3.jpg', 'shop-product.html')
+
+	include include/footer

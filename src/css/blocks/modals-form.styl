@@ -2,112 +2,122 @@
 	display none
 
 .mfp-close-btn-in .mfp-close
-	color: #f3495e
 	opacity: 1
-	font-size 36px
+	font-size 0
+	top 20px
+	right 20px
+	width 20px
+	height 20px
+	background-image: url(../img/closed.svg)
 
 .mfp-bg
 	background #1a1a1a !important
 	opacity .5
 
-.formValidate
-	span.error
-		position absolute
-		font-size 14px
-		right 0
-		bottom 5px
-		color #19bfbb
-
-.main-form.popup-text
-	max-width: 800px
-	.main-form__text
-		position relative
-		p
-			font-family GothamPro
-			font-size 1rem
-			line-height 1.6rem
-			color #dfdfdf
+// .main-form.popup-text
+// 	max-width: 800px
+// 	.main-form__text
+// 		position relative
+// 		p
+// 			font-family GothamPro
+// 			font-size 1rem
+// 			line-height 1.6rem
+// 			color #dfdfdf
 			
 .main-form
 	box-sizing border-box
 	position relative
-	max-width 520px
-	margin 40px auto
+	max-width 700px
+	margin 0 auto
 	background cWhite
-	color #fff
-	padding 40px 38px 38px
-	border-radius 4px
-	box-shadow 0 0 30px 1px #333
-	@media screen and (max-width: 480px)
-		margin 20px 10px
-		padding-left 22px
-		padding-right 22px
-	.heading-h2
-		margin-bottom 26px
-	.main-form__submit
+	color cBlueDark
+	border 2px solid cBlueDark
+	.heading-popup
 		position relative
-		.main-form_label
-			font-family: fPoppinsSemiBold
-			font-size: 12px
-			color: #000
-			text-transform uppercase
-			display block
-			margin-bottom 11px
-		.main-form_input
-			width 100%
-			font-size: 12px
-			font-family: fPoppinsSemiBold
-			line-height: 48px
-			letter-spacing: 0
-			padding 0 15px
-			color: #000
-			height 48px
-			border: 1px solid #979797
-			border-radius 4px
-		textarea
-			min-height 100px
-	.main-form_items-input
-		position relative
-		margin-bottom 18px
-	.main-form_items-button
-		text-align center
-		button
-			width 100%
-	.wraps-date
 		display flex
 		flex-direction row
+		flex-wrap wrap
 		justify-content space-between
-		.items-input--date
-			width 60%
-		.items-input--time
-			width 40%
-			display flex
-			align-items flex-end
-
-#go_popup
-	.one_go_popup
-		position relative
-		h4
-			font-family: BebasNeue
-			font-weight: 600
-			text-transform: uppercase
-			font-size: 2rem
-			letter-spacing: .04em
-			line-height: 2.8rem
-			color #fff
+		align-items center
+		padding 40px
+		padding-right 60px
+		&:before
+			position absolute
+			bottom 0
+			left 0
+			content ""
+			width 100%
+			height 4px
+			background: gradient
+		&__images
+			position relative
+			width 220px
+			height 220px
+			overflow hidden
+			margin-right 20px
+			img
+				position absolute
+				top 50%
+				left 50%
+				width 100%
+				tt(-50%, -50%)
+		
+		&__content
+			max-width 340px
 			text-align center
-			margin-bottom 30px
-		p
-			font-family GothamPro
-			font-size 1rem
-			line-height 1.6rem
-			color #dfdfdf
+			i
+				font-size 12px
+			h3
+				font-size 14px
+				ffa(JournalSansNew-Bold)
+				lh(22px)
+				margin-bottom 8px
+			p
+				font-size 14px
+				lh(22px)
+	
+	&__submit
+		padding-top 40px
+		padding-bottom 60px
+		.heading-form
+			text-align center
+			margin-bottom 20px
+			h3
+				font-size 18px
+				ffa(JournalSansNew-Bold)
+				text-transform uppercase
+				ls(1.5px)
+				margin-bottom 8px
+			p
+				font-size 15px
+				ffa(JournalSansNew)
+				ls(2px)
+				font-weight normal
+
+.main-form__submit
+	background: cBlueDark
+	c cWhite
+	p
+		c cWhite
+	
+	.wrap-input
+		display flex
+		flex-direction row
+		justify-content center
+		.main-form_input
+			min-width 200px
+			height 34px
+			padding 10px
+			font-size 12px
+			ffa(JournalSansNew)
+			margin-right 4px
+			c #9d9d9c
 
 
-.main-form_input::-webkit-input-placeholder {font-family 12px;  color: rgba(0, 0, 0, 0.09);}
-.main-form_input::-moz-placeholder {font-family 12px;  color: rgba(0, 0, 0, 0.09);}
-.main-form_input:-moz-placeholder {font-family 12px;  color: rgba(0, 0, 0, 0.09);}
-.main-form_input:-ms-input-placeholder {font-family 12px;  color: rgba(0, 0, 0, 0.09);}
+.main-form_input::-webkit-input-placeholder {font-family 12px; letter-spacing: 2px;  color: #9d9d9c;}
+.main-form_input::-moz-placeholder {font-family 12px; letter-spacing: 2px;  color: #9d9d9c;}
+.main-form_input:-moz-placeholder {font-family 12px; letter-spacing: 2px;  color: #9d9d9c;}
+.main-form_input:-ms-input-placeholder {font-family 12px; letter-spacing: 2px;  color: #9d9d9c;}
 
 .mfp-hide {
   display: none;

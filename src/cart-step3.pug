@@ -1,0 +1,58 @@
+extends layout.pug
+
+block prepend header-shop
+	- var selected = 'shop'
+	include include/header-shop
+
+block prepend main
+	svg.shape-overlays(viewbox='0 0 100 100', preserveaspectratio='none')
+		path.shape-overlays__path
+		path.shape-overlays__path
+		path.shape-overlays__path
+
+	+b.MAIN.section_main
+		+b.SECTION.product-all_
+			.container
+				.product-all__wrapper
+					include include/filter-cart
+
+					.main-product
+						.cart-wrapper.cart-wrapper__payment
+							form.delivery-wrapper
+
+								.delivery-wrapper__items
+									h3 PAYMENT DETAILS
+									.delivery-forms.delivery-forms__payment
+										.delivery-forms-50
+											label.error First Name
+											input
+										.delivery-forms-50
+											label.error Last Name
+											input
+										.delivery-forms-100
+											label.error Card type
+											.custom-select
+												select.error
+													option(value="0")
+													option(value="1") Card type 
+													option(value="2") Card type 
+													option(value="3") Card type 
+													option(value="4") Card type 
+													option(value="5") Card type 
+										.delivery-forms-100
+											label.error Card number
+											input
+										.delivery-forms-50
+											label.error Expiry date
+											input
+										.delivery-forms-50
+											label.error CSC
+											input
+										.delivery-forms-100
+											label.error Postcode
+											input
+										.delivery-forms-100
+											button.button-product PAY NOW
+
+
+	include include/footer

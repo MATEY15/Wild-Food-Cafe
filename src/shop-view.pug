@@ -1,0 +1,83 @@
+extends layout.pug
+
+block prepend header-shop
+	- var selected = 'shop'
+	include include/header-shop
+
+block prepend main
+	svg.shape-overlays(viewbox='0 0 100 100', preserveaspectratio='none')
+		path.shape-overlays__path
+		path.shape-overlays__path
+		path.shape-overlays__path
+
+	+b.MAIN.section_main
+		+b.SECTION.shop-view_
+			include include/_7section
+		+b.SECTION.product-all_
+			.container
+				.product-all__wrapper
+					+b.DIV.filter-product_
+						.link-all
+							a(href="#").link-all__button VIEW ALL
+						+e.DIV.__tabs
+							h3.name-tab INGREDIENTS
+							ul
+								li
+									label.checkbox
+										input(type="checkbox" required="")
+										p.checkbox__text
+											| SUPERFOODS
+								li
+									label.checkbox
+										input(type="checkbox" required="")
+										p.checkbox__text
+											| SUPERHERBS
+								li
+									label.checkbox
+										input(type="checkbox" required="")
+										p.checkbox__text
+											| WELL BEING SUPPLEMENTS
+								li
+									label.checkbox
+										input(type="checkbox" required="")
+										p.checkbox__text
+											| RAW CACAO RANGE
+
+						+e.DIV.__tabs
+							h3.name-tab MERCHANDISE
+							ul
+								li
+									label.checkbox
+										input(type="checkbox" checked required="")
+										p.checkbox__text
+											| CLOTHING
+								li
+									label.checkbox
+										input(type="checkbox" required="")
+										p.checkbox__text
+											| GIFT VOUCHERS
+								li
+									label.checkbox
+										input(type="checkbox" required="")
+										p.checkbox__text
+											| TOTE BAG
+
+					.main-product
+						.wrapper-product
+							+productBS('Incan Berries', '£30.49', 'img/sellers/sellers2.jpg', 'shop-product.html')
+							+product('MSM Pure Crystal Capsules', '£30.49', 'img/sellers/sellers3.jpg', 'shop-product.html')
+							+product('MSM Pure Crystal Capsules', '£30.49', 'img/sellers/sellers3.jpg', 'shop-product.html')
+
+							+product('Incan Berries', '£30.49', 'img/sellers/sellers5.jpg', 'shop-product.html')
+							+product('Incan Berries', '£30.49', 'img/sellers/sellers6.jpg', 'shop-product.html')
+							+productBS('Incan Berries', '£30.49', 'img/sellers/sellers6.jpg', 'shop-product.html')
+
+							+product('Incan Berries', '£30.49', 'img/sellers/sellers2.jpg', 'shop-product.html')
+							+product('Incan Berries', '£30.49', 'img/sellers/sellers3.jpg', 'shop-product.html')
+							+product('Incan Berries', '£30.49', 'img/sellers/sellers3.jpg', 'shop-product.html')
+
+							+productBS('Incan Berries', '£30.49', 'img/sellers/sellers5.jpg', 'shop-product.html')
+							+product('Incan Berries', '£30.49', 'img/sellers/sellers6.jpg', 'shop-product.html')
+							+product('Incan Berries', '£30.49', 'img/sellers/sellers6.jpg', 'shop-product.html')
+
+	include include/footer

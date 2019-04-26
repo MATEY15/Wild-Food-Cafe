@@ -6,8 +6,23 @@ mixin navMenu(name, link)
 	+e.LI.__li
 		+e.A(href=link).__link=name
 
-mixin links(name, link)
+mixin links(name, price, link)
 	+e.A(href=link)&attributes(attributes)= name
+
+mixin product(name, price, linkImg, link)
+	+b.DIV.product-items_
+		+e.A(href=link).__images
+			img(src=linkImg, alt="")
+		+e.A(href=link).__name=name
+		+e.SPAN.__date=price
+
+mixin productBS(name, price, linkImg, link)
+	+b.DIV.product-items_
+		+e.A(href=link).__images
+			img(src=linkImg, alt="")
+			span.__best-seller BEST SELLER
+		+e.A(href=link).__name=name
+		+e.SPAN.__date=price
 
 doctype html
 html(lang="en")
@@ -39,29 +54,36 @@ html(lang="en")
 
 		block header-blog
 
+		block header-shop
+
 		block main
 		
 		block footer
 
 		.hidden
 			+b.main-form.zoom-anim-dialog#popup-send
-				+e.FORM.__submit.formValidate
-					H2.heading-h2
-						| Request Quote
-					+e.items-input
-						+e.LABEL().label Name
-						+e.INPUT(name="text", placeholder="First and Last Name").input
-					+e.items-input
-						+e.LABEL().label E-Mail*
-						+e.INPUT(name="text", placeholder="E-mail").input
-					+e.items-input
-						+e.LABEL().label Company name*
-						+e.INPUT(name="text", placeholder="Company name").input
-					+e.items-input
-						+e.LABEL().label message
-						+e.TEXTAREA(name="text", placeholder="How SwiftMotion can help you?").input
-					+e.items-button
-						button.button(type="submit") Request Quote
+				+b.DIV.heading-popup
+					+e.DIV.__images
+						img(src="img/popup-img.jpg", alt="")
+					+e.DIV.__content
+						i HOT OFF THE PRESS
+						h3
+							| NEW PIZZA TOPPING:
+							br
+							| CHESNUT MUSHROOM + ROSEMARY
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus pretium felis at dignissim. Morbi vel leo non est luctus tempor. Phasellus vel magna at elit sagittis luctus eu condimentum augue. Sed placerat magna iaculis iaculis feugiat. Aliquam erat volutpat.
+
+				+e.FORM.__submit
+					.heading-form
+						h3 SIGN UP TO OUR NEWSLETTER
+						p and receive your FREE seasonal ingredients calendar
+					.wrap-input
+						+e.items-input
+							+e.INPUT(name="text", placeholder="Full Name").input
+						+e.items-input
+							+e.INPUT(name="text", placeholder="Email").input
+						+e.items-button
+							button.button-popup(type="submit") SIGN UP
 
 		block scripts
 			script(src='https://unpkg.com/flipping@latest/dist/flipping.web.js')

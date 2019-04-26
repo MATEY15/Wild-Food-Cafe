@@ -26,8 +26,55 @@ block prepend main
 			+b.DIV.post-read_
 				.container
 					+e.DIV.__heading
-						h1 NEAL’S YARD REFRESH
-						span.date | 12 FEBRUARY 2019
+						h1 
+							| NEAL’S YARD 
+							br
+							| REFRESH
 					+e.DIV.__content
+						span.date | 12 FEBRUARY 2019
+						img(src="img/post-read1.jpg", alt="").align-right
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus pretium felis at dignissim. Morbi vel leo non est luctus tempor. Phasellus vel magna at elit sagittis luctus eu condimentum augue. Sed placerat magna iaculis iaculis feugiat. Aliquam erat volutpat. Aliquam nec velit ut enim fringilla rhoncus. Mauris non nisi ligula. Morbi id ultrices lectus. Pellentesque ut risus a sem scelerisque commodo ut volutpat orci. Suspendisse hendrerit pellentesque tellus sed dignissim. Etiam at fermentum lorem. Duis et diam sed lectus imperdiet tincidunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus pretium felis at dignissim. Morbi vel leo non est luctus tempor. Phasellus vel magna at elit sagittis luctus eu condimentum augue. Sed placerat magna iaculis iaculis feugiat. Aliquam erat volutpat. Aliquam nec velit ut enim fringilla rhoncus. Mauris non nisi ligula. Morbi id ultrices lectus. Pellentesque ut risus a sem scelerisque commodo ut volutpat orci.
-						img(src="", alt="")
+						
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus pretium felis at dignissim. Morbi vel leo non est luctus tempor. Phasellus vel magna at elit sagittis luctus eu condimentum augue. Sed placerat magna iaculis iaculis feugiat. Aliquam erat volutpat. Aliquam nec velit ut enim fringilla rhoncus. Mauris non nisi ligula. Morbi id ultrices lectus. Pellentesque ut risus a sem scelerisque commodo ut volutpat orci. Suspendisse hendrerit pellentesque tellus sed dignissim. Etiam at fermentum lorem. Duis et diam sed lectus imperdiet tincidunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus pretium felis at dignissim. Morbi vel leo non est luctus tempor. Phasellus vel magna at elit sagittis luctus eu condimentum augue. Sed placerat magna iaculis iaculis feugiat. Aliquam erat volutpat. Aliquam nec velit ut enim fringilla rhoncus. Mauris non nisi ligula. Morbi id ultrices lectus. Pellentesque ut risus a sem scelerisque commodo ut volutpat orci.
+						img(src="img/post-read2.jpg", alt="").align-left
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus pretium felis at dignissim. Morbi vel leo non est luctus tempor. Phasellus vel magna at elit sagittis luctus eu condimentum augue. Sed placerat magna iaculis iaculis feugiat. Aliquam erat volutpat. Aliquam nec velit ut enim fringilla rhoncus. Mauris non nisi ligula. Morbi id ultrices lectus. Pellentesque ut risus a sem scelerisque commodo ut volutpat orci. Suspendisse hendrerit pellentesque tellus sed dignissim. Etiam at fermentum lorem. Duis et diam sed lectus imperdiet tincidunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus pretium felis at dignissim. Morbi vel leo non est luctus tempor. Phasellus vel magna at elit sagittis luctus eu condimentum augue. Sed placerat magna iaculis iaculis feugiat. Aliquam erat volutpat. Aliquam nec velit ut enim fringilla rhoncus. Mauris non nisi ligula. Morbi id ultrices lectus. Pellentesque ut risus a sem scelerisque commodo ut volutpat orci.
+	
+					+e.DIV.__share
+						.wrap__share-social
+							.share-social
+								.share-center
+									span SHARE
+									ul.share-social__list
+										li
+											a(href="#")
+												+e.SVG.__facebook
+													USE(xlink:href="img/sprite.svg#facebook")
+												span 21
+										li
+											a(href="#")
+												+e.SVG.__twitter
+													USE(xlink:href="img/sprite.svg#twitter")
+												span 45
+
+					.navigation-post
+						.nav-post
+							a(href="#").prev-post
+								| &#60; Previous
+						.nav-post
+							a(href="#").next-post
+								| Next &#62;
+
+				+b.recent-article_
+					.container
+						+e.DIV.__heading
+							h3
+								| RECENT ARTICLES
+
+						+e.DIV.__wrapper
+							include include/recent-article
+							include include/recent-article
+							include include/recent-article
+
+
+
+	include include/footer

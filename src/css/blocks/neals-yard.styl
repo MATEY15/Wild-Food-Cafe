@@ -1,16 +1,25 @@
 .post-events
 	padding-top 70px
 	padding-bottom 70px
+	@media screen and (max-width: 1024px)
+		padding-top 50px
+		padding-bottom 50px
 
 .menu-category
 	text-align right
 	margin-bottom 50px
+	@media screen and (max-width: 480px)
+		margin-bottom 30px
 
 .post-big
 	&__wrapper
 		display flex
 		flex-direction row
 		justify-content space-between
+		@media screen and (max-width: 1200px)
+			align-items center
+		@media screen and (max-width: 768px)
+			flex-direction column
 	
 	.line-gradient
 		margin-top 70px
@@ -19,22 +28,34 @@
 	&__images,
 	&__content
 		width 50%
+		@media screen and (max-width: 768px)
+			width 100%
+			max-width 600px
 	
 	&__images
 		padding-right 70px
 		padding-top 10px
+		@media screen and (max-width: 1024px)
+			padding-right 20px
+		@media screen and (max-width: 768px)
+			padding-right 0
+			margin-bottom 40px
 		img
 			width 100%
 	
 	&__content
 		p
-			font-size 17px
+			font-size 16px
+			@media screen and (max-width: 600px)
+				font-size 15px
+			@media screen and (max-width: 480px)
+				text-align justify
 	
 	&__heading
 		ffa(JournalSansNew-Bold)
 		font-size 28px
 		text-transform uppercase
-		ls(2px)
+		ls(2.8px)
 		lh(36px)
 		c cBlueDark
 		margin-bottom 20px
@@ -45,12 +66,20 @@
 		font-weight normal
 		text-transform uppercase
 		margin-left 14px
+		@media screen and (max-width: 1024px)
+			display block
+			margin-left 0
 
 .post-small
 	display flex
 	flex-direction row
 	flex-wrap wrap
 	margin 0 -40px
+	@media screen and (max-width: 1200px)
+		margin 0
+	@media screen and (max-width: 600px)
+		flex-direction column
+		align-items center
 	
 	&__items
 		width 33.3%
@@ -58,6 +87,15 @@
 		text-align center
 		c cBlueDark
 		margin-bottom 40px
+		@media screen and (max-width: 1200px)
+			padding 0 20px
+		@media screen and (max-width: 854px)
+			width 50%
+		@media screen and (max-width: 768px)
+			padding 0 10px
+		@media screen and (max-width: 600px)
+			width 100%
+			max-width 355px
 	
 	&__images
 		position relative
@@ -66,6 +104,9 @@
 		min-height 220px
 		overflow hidden
 		margin-bottom 40px
+		@media screen and (max-width: 720px)
+			min-height 180px
+			margin-bottom 20px
 		img
 			position absolute
 			top 50%
@@ -75,13 +116,17 @@
 			tt(-50%, -50%)
 	
 	&__heading
-		font-size 24px
+		font-size 22px
 		text-transform uppercase
 		ls(2.5px)
 		margin-bottom 20px
 		a
 			c cBlueDark
 			text-decoration none
+	
+	&__text
+		font-size 14px
+		lh(22px)
 	
 	&__date
 		display block
@@ -106,4 +151,95 @@
 			background-image: url(../img/slide-arrow.svg)
 			background-repeat no-repeat
 			transform rotateZ(-90deg)
+
+
+/* Read post */
+
+.post-read
+	&__heading
+		h1
+			font-size 66px
+			ffa(JournalSansNew-Bold)
+			c cBlueDark
+			ls(2.5px)
+			margin-bottom 20px
+	
+	&__content
+		.date
+			font-size 16px
+			ffa(JournalSansNew)
+			lh(16px)
+			ls(1.25px)
+			c cBlueDark
+			display inline-block
+			margin-bottom 30px
 		
+		p
+			lh(22px)
+			margin-bottom 40px
+		
+		img
+			max-width 100%
+		
+		img.align-right
+			margin-left 40px
+		img.align-left
+			margin-right 50px
+	
+	&__share
+		padding-top 70px
+		padding-bottom 20px
+
+/* Navigation Post */
+
+.navigation-post
+	margin-top 40px
+	margin-bottom 70px
+
+/* Recent article */
+
+.recent-article
+	&__heading
+		text-align center
+		margin-bottom 40px
+		h3
+			font-size 20px
+			ffa(JournalSansNew)
+			c cBlueDark
+			font-weight normal
+			ls(2px)
+	
+	&__wrapper
+		display flex
+		flex-direction row
+		justify-content space-between
+	
+	&__items
+		width 33.3%
+		padding 0 40px
+		text-align center
+		c cBlueDark
+	
+	&__images
+		position relative
+		display block
+		width 100%
+		min-height 220px
+		overflow hidden
+		margin-bottom 20px
+		img
+			position absolute
+			top 50%
+			left 50%
+			width 100%
+			height auto
+			tt(-50%, -50%)
+	
+	&__heading-recent
+		font-size 22px
+		text-transform uppercase
+		ls(2px)
+		margin-bottom 20px
+		a
+			c cBlueDark
+			text-decoration none

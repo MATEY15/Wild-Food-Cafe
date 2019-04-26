@@ -6,6 +6,10 @@
 	.pink-color
 		background: cPink
 		c cPinkDark
+		.choice__head,
+		.choice__slogan,
+		.choice__descript
+			c cPinkDark
 	&__wrapper
 		display flex
 		flex-direction row
@@ -38,6 +42,7 @@
 		text-transform uppercase
 		ls(2px)
 		margin-bottom 20px
+		c cYellow
 		@media screen and (max-width: 600px)
 			margin-bottom 10px
 			font-size 12px
@@ -54,8 +59,19 @@
 		text-transform uppercase
 		ls(2px)
 		margin-bottom 24px
+		c cYellow
 		@media screen and (max-width: 600px)
 			font-size 16px
 			margin-bottom 10px
+	&__logo-text
+		margin-bottom 10px
 	&__descript
 		font-size 16px
+		c cYellow
+
+// .choice__items.pink-color
+// 	.choice__name,
+// 	.choice__slogan,
+// 	.choice__descript,
+// 	.choice__head
+// 		c	cPink

@@ -1,54 +1,57 @@
 +b.SECTION.top-line
-	.container-big
-		.flex-wrapper
-			+b.DIV.logo-top_
-				+e.A(href="index.html").__link
-					+e.SVG.__svg
-						USE(xlink:href="img/sprite.svg#logo")
-					+e.SPAN.__name WILD FOOD CAFÉ
-			+b.menu-header
-				+b.NAV.nav-top_
-					+e.UL.__list
-						+e.LI.__list-li
-							a(href="#") Restaurants
-							+b.DIV.sub-menu_
-								+e.UL.__list
-									+e.LI.__li
-										+e.A(href="#").__link NEAL’S YARD
-									+e.LI.__li
-										+e.A(href="#").__link ISLINGTON
-						+e.LI.__list-li
-							a(href="school.html") School
-						+e.LI.__list-li
-							a(href="#") Events
-						+e.LI.__list-li
-							a(href="#") About
-						+e.LI.__list-li
-							a(href="#") SHOP
-						+e.LI.__list-li
-							a(href="blog.html") Blog
-						+e.LI.__list-li
-							a(href="#") Press
-						+e.LI.__list-li
-							a(href="#") Contact
-			
-			.soc-wrapper
-				+b.social-top_
-					+e.UL.__list
-						+e.LI.__li
-							+e.A(href="#").__link
-								+e.SVG.__facebook
-									USE(xlink:href="img/sprite.svg#facebook")
-						+e.LI.__li
-							+e.A(href="#").__link
-								+e.SVG.__instagramm
-									USE(xlink:href="img/sprite.svg#instagramm")
-						+e.LI.__li
-							+e.A(href="#").__link
-								+e.SVG.__twitter
-									USE(xlink:href="img/sprite.svg#twitter")
-				a(href="#").button BOOK NOW
-				.burger-menu
-					span
-					span
-					span
+	//- .container-big
+	.flex-wrapper
+		+b.DIV.logo-top_
+			+e.A(href="index.html").__link
+				//- img(src="img/logo.svg", alt="")
+				+e.SVG.__svg
+					USE(xlink:href="img/sprite.svg#logo")
+				+e.SVG.__svg.logo-small
+					USE(xlink:href="img/sprite.svg#logo-icon")
+				//- +e.SPAN.__name WILD FOOD CAFÉ
+		+b.menu-header
+			+b.NAV.nav-top_
+				+e.UL.__list
+					+e.LI.__list-li
+						a(href="#") Restaurants
+						+b.DIV.sub-menu_
+							+e.UL.__list
+								+e.LI.__li
+									+e.A(href="#").__link NEAL’S YARD
+								+e.LI.__li
+									+e.A(href="#").__link ISLINGTON
+					+e.LI.__list-li
+						a(href="#") Events
+					+e.LI.__list-li
+						a(href="school.html") School
+					+e.LI.__list-li
+						a(href="#") About
+					+e.LI.__list-li
+						a(href="shop-view.html") SHOP
+					+e.LI.__list-li
+						a(href="blog.html") Blog
+					+e.LI.__list-li
+						a(href="#") Press
+					+e.LI.__list-li
+						a(href="#") Contact
+		
+		.soc-wrapper
+			+b.social-top_
+				+e.UL.__list
+					+e.LI.__li
+						+e.A(href="#").__link
+							+e.SVG.__facebook
+								USE(xlink:href="img/sprite.svg#facebook")
+					+e.LI.__li
+						+e.A(href="#").__link
+							+e.SVG.__instagramm
+								USE(xlink:href="img/sprite.svg#instagramm")
+					+e.LI.__li
+						+e.A(href="#").__link
+							+e.SVG.__twitter
+								USE(xlink:href="img/sprite.svg#twitter")
+			a(href="#popup-send").button.popup BOOK NOW
+			.burger-menu
+				span
+				span
+				span

@@ -1,0 +1,297 @@
+.cart-wrapper
+	padding 20px
+	margin-bottom 40px
+	@media screen and (max-width: 900px)
+		padding 20px 10px
+	&__payment
+		max-width 500px
+		border 2px solid #dadada
+		@media screen and (max-width: 854px)
+			margin 0 auto 40px
+		.delivery-wrapper__items
+			width 100%
+			padding-top 10px
+			padding-bottom 10px
+	
+	.cart-total
+		display flex
+		justify-content flex-end
+		@media screen and (max-width: 1024px)
+			padding-top 40px
+		@media screen and (max-width: 540px)
+			justify-content center
+
+.cart-total__content
+	max-width 200px
+
+.shipping
+	max-width 160px
+	margin 20px auto
+	li
+		fff(15px, 'JournalSansNew', 2.5px)
+		c cBlueDark
+		&:not(:last-child)
+			margin-bottom 10px
+		span
+			float right
+
+.total-text
+	max-width 180px
+	fff(20px, 'JournalSansNew', 2.5px)
+	text-transform uppercase
+	c cBlueDark
+	margin 0 auto 20px
+	span
+		float right
+
+.cart-product__items
+	display flex
+	flex-direction row
+	justify-content space-between
+	padding-left 20px
+	padding-right 20px
+	@media screen and (max-width: 1160px)
+		padding-left 0px
+		padding-right 0px
+	@media screen and (max-width: 1024px)
+		align-items center
+	@media screen and (max-width: 540px)
+		flex-direction column
+		// align-items end
+	&:not(:last-child)
+		margin-bottom 30px
+	
+	.count-cart
+		padding-top 8px
+		padding-left 20px
+		padding-right 20px
+		@media screen and (max-width: 1024px)
+			padding 0 10px
+		input
+			text-align center
+			border 2px solid #dadada
+			height 28px
+			lh(28px)
+			width 40px
+			fff(18px, 'JournalSansNew', 2.5px)
+			c cBlueDark
+	.price--wrapper
+		display flex
+		flex-direction row
+		@media screen and (max-width: 540px)
+			align-items center
+		.price
+			fff(18px, 'JournalSansNew', 2.5px)
+			c cBlueDark
+			text-decoration none
+			padding-top 10px
+			@media screen and (max-width: 1024px)
+				padding-top 0
+
+.delete
+	cursor pointer
+	margin-right 20px
+	@media screen and (max-width: 375px)
+		margin-right 0
+		margin-bottom 10px
+
+.product-checked
+	display flex
+	flex-direction row
+	align-items center
+	@media screen and (max-width: 540px)
+		margin-bottom 20px
+	@media screen and (max-width: 375px)
+		flex-direction column
+	.cart-img
+		position relative
+		min-width 70px
+		min-height 70px
+		overflow hidden
+		margin-right 20px
+		@media screen and (max-width: 1200px)
+			margin-right 0
+		@media screen and (max-width: 375px)
+			margin-bottom 10px
+		img
+			position absolute
+			top 50%
+			left 50%
+			width 100%
+			height auto
+			tt(-50%, -50%)
+
+	.names
+		text-decoration none
+		@media screen and (max-width: 1200px)
+			padding 0 10px
+		@media screen and (max-width: 375px)
+			text-align center
+		span
+			display block
+			fff(15px, 'JournalSansNew', 1.8px)
+			c cBlueDark
+			text-decoration none
+			&:not(:last-child)
+				margin-bottom 16px
+				@media screen and (max-width: 1160px)
+					margin-bottom 6px
+				@media screen and (max-width: 1024px)
+					margin-bottom 0
+
+/* Form */
+
+.delivery-wrapper
+	display flex
+	flex-direction row
+	@media screen and (max-width: 600px)
+		flex-direction column
+	&__items
+		width 50%
+		@media screen and (max-width: 600px)
+			width 100%
+			display flex
+			flex-direction column
+			align-items center
+			&:not(:last-child)
+				margin-bottom 20px
+		h3
+			fff(18px, 'JournalSansNew-Display', 3.5px)
+			c cBlueDark
+			text-align center
+			margin-bottom 40px
+			@media screen and (max-width: 1120px)
+				margin-bottom 20px
+
+.delivery-forms
+	max-width 380px
+	display flex
+	flex-direction row
+	flex-wrap wrap
+	margin 0 -10px
+	@media screen and (max-width: 1120px)
+		max-width 350px
+		margin 0
+	@media screen and (max-width: 600px)
+		max-width 100%
+	&__payment
+		max-width 100%
+		margin 0
+		@media screen and (max-width: 1120px)
+			max-width 100%
+	label
+		position relative
+		display inline-block
+		fff(14px, 'JournalSansNew', 1.8px)
+		c #b2b2b2
+		padding-left 5px
+		margin-bottom 6px
+		&.error:before
+			position absolute
+			content '*'
+			right -10px
+			top 2px
+			c #ff00f9
+			fff(14px, 'MyriadPro-Regular', 2px)
+	input,
+	textarea
+		fff(12px, 'JournalSansNew', .5px)
+		c #b2b2b2
+		width 100%
+		border 2px solid #dadada
+		height 32px
+		padding 8px 10px 10px
+		margin-bottom 10px
+	textarea
+		min-height 62px
+	button.button-product
+		width 100%
+	.checkbox
+		&__text
+			fff(14px, 'JournalSansNew', 1.8px)
+			c #b2b2b2
+			line-height 18px
+			&:before
+				border 2px solid #dadada
+		input:checked+.checkbox__text:before
+			background-image: url(../img/chekbox-gray.jpg)
+	.delivery-forms-50
+		width 50%
+	.delivery-forms-100
+		width 100%
+	[class*='delivery-forms-']
+		padding 0 10px
+		&:not(:last-child)
+			margin-bottom 10px
+		@media screen and (max-width: 960px)
+			padding 0 5px
+		@media screen and (max-width: 360px)
+			width 100%
+		
+.delivery-forms textarea::-webkit-input-placeholder {font-family 12px; letter-spacing: 1.5px;  color: #9d9d9c;}
+.delivery-forms textarea::-moz-placeholder {font-family 12px; letter-spacing: 1.5px;  color: #9d9d9c;}
+.delivery-forms textarea:-moz-placeholder {font-family 12px; letter-spacing: 1.5px;  color: #9d9d9c;}
+.delivery-forms textarea:-ms-input-placeholder {font-family 12px; letter-spacing: 1.5px;  color: #9d9d9c;}
+
+.delivery-forms input::-webkit-input-placeholder {font-family 12px; letter-spacing: 1.5px;  color: #9d9d9c;}
+.delivery-forms input::-moz-placeholder {font-family 12px; letter-spacing: 1.5px;  color: #9d9d9c;}
+.delivery-forms input:-moz-placeholder {font-family 12px; letter-spacing: 1.5px;  color: #9d9d9c;}
+.delivery-forms input:-ms-input-placeholder {font-family 12px; letter-spacing: 1.5px;  color: #9d9d9c;}
+
+.custom-select
+	margin-bottom 10px
+	.select-selected
+		display block
+		height 32px
+		fff(12px, 'JournalSansNew', 1px)
+		c #b2b2b2
+		border: 2px solid #dadada
+		padding: 8px 10px 10px
+		&:after
+			border-color #b2b2b2
+	
+	.select-items
+		div
+			c #b2b2b2
+
+.order-items
+	text-align center
+	padding-top 40px !important
+	padding-bottom 20px
+	
+	h3
+		font-size 20px
+		lh(30px)
+	
+	button
+		width 100%
+		&:not(:last-child)
+			margin-bottom 10px
+	
+	.content
+		p
+			fff(18px, 'JournalSansNew-Display', 2.5px)
+			font-weight normal
+			c cBlueDark
+			margin-bottom 40px
+	
+	.you-order__link
+		margin-bottom 70px
+		li
+			a
+				fff(16px, 'JournalSansNew-Display', 2px)
+				c cBlack
+		
+
+.you-order
+	c #c6c6c6
+	margin-bottom 40px
+	h4,
+	ul li
+		fff(16px, 'JournalSansNew-Display', 2.5px)
+		font-weight normal
+	h4
+		margin-bottom 10px
+	ul
+		li:not(:last-child)
+			margin-bottom 10px

@@ -1,0 +1,13 @@
++b.HEADER.header-shop_
+	+b.DIV.shop-line_
+		+e.DIV.__logo
+			a(href="index.html").logo-shop
+				+e.SVG.__svg
+					USE(xlink:href="img/sprite.svg#logo-icon")
+		+e.DIV.__name
+			img(src="img/logo-shop.svg", alt="", width="400px", height="50px")
+		+e.DIV.__cart
+			a(href="cart-step1.html").gocart
+				+e.SVG.__svg
+					USE(xlink:href="img/sprite.svg#cart")
+				span.cart-count 1

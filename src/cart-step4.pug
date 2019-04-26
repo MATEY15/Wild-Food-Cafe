@@ -1,0 +1,49 @@
+extends layout.pug
+
+block prepend header-shop
+	- var selected = 'shop'
+	include include/header-shop
+
+block prepend main
+	svg.shape-overlays(viewbox='0 0 100 100', preserveaspectratio='none')
+		path.shape-overlays__path
+		path.shape-overlays__path
+		path.shape-overlays__path
+
+	+b.MAIN.section_main
+		+b.SECTION.product-all_
+			.container
+				.product-all__wrapper
+					include include/filter-cart
+
+					.main-product
+						.cart-wrapper.cart-wrapper__payment
+							form.delivery-wrapper
+
+								.delivery-wrapper__items.order-items
+									h3
+										| ORDER RECEIVED!
+										br
+										| THANK YOU
+									.you-order
+										h4 YOUR ORDER NO. #000453
+										ul
+											li Total Cost 
+												span £0.00
+											li Items: 
+												span 00
+									.content
+										p
+											| You will receive an email receipt
+											br
+											| shortly, please check your inbox.
+										ul.you-order__link
+											li
+												a(href="#") Print confirmation
+											li
+												a(href="#") Cancel this order
+										button.button-product CONTINUE SHOPPING
+										button.button-product HOME PAGE
+
+
+	include include/footer
